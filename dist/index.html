@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按播出顺序翻查《唐朝诡事录》系列的案件、人物与官职变迁。">
+  <meta name="theme-color" content="#161f1d">
+  <title>唐诡宇宙 · 大唐诡案档案馆</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="archive-utils.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#cases">跳至案件目录</a>
+  <header class="masthead">
+    <a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>大唐诡案档案馆</small></span></a>
+    <nav aria-label="主导航"><a href="#cases">案卷</a><a href="#people">人物</a><a href="#career">官职</a><a href="#sources">来源</a></nav>
+    <button class="search-toggle" type="button" aria-label="检索案卷"><span aria-hidden="true">⌕</span> <span class="search-label">检索</span></button>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <span class="eyebrow">大唐 · 诡案档案馆</span>
+        <h1 id="hero-title">唐诡<span>宇宙</span></h1>
+        <p>从长安红茶到西行迷案，从重返帝都到夜魅浮屠。沿着苏无名与卢凌风的足迹，翻开大唐案卷。</p>
+        <div class="hero-actions"><a class="primary" href="#cases">翻开案卷 <span aria-hidden="true">↘</span></a><a class="secondary" href="#people">查看人物</a></div>
+      </div>
+      <div class="hero-ledger" id="hero-ledger" aria-label="收录概览"></div>
+      <p class="hero-credit" id="hero-credit"></p>
+    </section>
+
+    <div class="shell">
+      <section id="cases" class="archive-section" aria-labelledby="cases-title">
+        <header class="section-heading"><div><p class="eyebrow">案卷库 · 按首播顺序</p><h2 id="cases-title">大唐案卷</h2></div><p>按剧集或案名检索。打开案卷可查看人物与分集线索，谜底默认折叠。</p></header>
+        <div class="toolbar">
+          <div class="filters" id="season-filters" aria-label="按剧集筛选"></div>
+          <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">检索案名、人物或线索</span><input type="search" id="case-search" placeholder="案名、人物或线索" autocomplete="off"></label>
+        </div>
+        <div class="results-line"><p id="result-count" role="status"></p><button type="button" id="saved-toggle" aria-pressed="false">☆ 已收藏</button></div>
+        <div class="case-grid" id="case-grid"></div>
+      </section>
+
+      <section id="people" class="archive-section" aria-labelledby="people-title">
+        <header class="section-heading"><div><p class="eyebrow">人物档案 · 关联案卷</p><h2 id="people-title">探案人物</h2></div><p>从常驻探案小队到单元关键人物，顺着人物找回关联的案件。</p></header>
+        <div class="people-grid" id="people-grid"></div>
+        <details class="guest-index"><summary>查看单元人物索引 <span id="guest-count"></span></summary><div id="guest-people"></div></details>
+      </section>
+
+      <section id="career" class="archive-section" aria-labelledby="career-title">
+        <header class="section-heading"><div><p class="eyebrow">官职簿 · 随剧情推进</p><h2 id="career-title">两位主角的仕途</h2></div><p>按剧情先后查看任官、离任与授命。展开可跳转到对应案卷。</p></header>
+        <div class="career-grid" id="career-grid"></div>
+      </section>
+
+      <section id="sources" class="archive-section" aria-labelledby="sources-title">
+        <header class="section-heading"><div><p class="eyebrow">收录说明 · 分集溯源</p><h2 id="sources-title">案卷校勘</h2></div><p>分集可交叠，遇到一集承接两案时分别标记。</p></header>
+        <div id="source-list" class="source-list"></div>
+        <div class="source-links"><a href="https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e4%b9%8b%e9%95%bf%e5%ae%89%e3%80%8b%e9%87%8d%e7%a3%85%e5%9b%9e%e5%bd%92%ef%bc%81%e5%94%90%e8%af%a1%e5%b0%8f%e5%88%86%e9%98%9f/" target="_blank" rel="noreferrer">长信传媒 · 长安八案 ↗</a><a href="https://peking.bjd.com.cn/content/s69463bcee4b0687a288e96df.html" target="_blank" rel="noreferrer">北京市广电局 · 奇谭两案 ↗</a></div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="case-dialog" id="record-dialog" aria-labelledby="record-title">
+    <div class="dialog-bar"><span class="eyebrow">大唐诡案档案馆</span><button type="button" class="close-dialog" aria-label="关闭案卷" autofocus>×</button></div>
+    <div id="record-content"></div>
+  </dialog>
+  <footer class="site-footer"><a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>非官方剧集资料站</small></span></a><a href="#top">返回卷首 ↑</a></footer>
+  <noscript>打开 JavaScript 后可使用案件检索、案卷阅读和本机收藏。</noscript>
+</body>
+</html>
