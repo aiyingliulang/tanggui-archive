@@ -15,10 +15,11 @@
   <a class="skip-link" href="#cases">跳至案件目录</a>
   <header class="masthead">
     <a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>大唐诡案档案馆</small></span></a>
-    <nav aria-label="主导航"><a href="#cases">案卷</a><a href="#people">人物</a><a href="#career">官职</a><a href="#sources">来源</a></nav>
+    <nav aria-label="主导航"><a href="#top" data-route="top">首页</a><a href="#cases" data-route="cases">案卷</a><a href="#people" data-route="people">人物</a><a href="#career" data-route="career">官职</a><a href="#spinoffs" data-route="spinoffs">外传</a><a href="#sources" data-route="sources">来源</a></nav>
     <button class="search-toggle" type="button" aria-label="检索案卷"><span aria-hidden="true">⌕</span> <span class="search-label">检索</span></button>
   </header>
-  <main id="top">
+  <main id="archive-main">
+    <div id="top" data-screen>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <span class="eyebrow">大唐 · 诡案档案馆</span>
@@ -29,9 +30,14 @@
       <div class="hero-ledger" id="hero-ledger" aria-label="收录概览"></div>
       <p class="hero-credit" id="hero-credit"></p>
     </section>
+    <section class="shell home-index" aria-labelledby="home-index-title">
+      <header class="section-heading"><div><p class="eyebrow">卷首 · 选一处开始</p><h2 id="home-index-title">馆藏导览</h2></div></header>
+      <div class="home-entries" id="home-entries"></div>
+    </section>
+    </div>
 
-    <div class="shell">
-      <section id="cases" class="archive-section" aria-labelledby="cases-title">
+    <div class="shell route-shell" id="route-shell" hidden>
+      <section id="cases" class="archive-section" data-screen hidden aria-labelledby="cases-title">
         <header class="section-heading"><div><p class="eyebrow">案卷库 · 按首播顺序</p><h2 id="cases-title">大唐案卷</h2></div><p>按剧集或案名检索。打开案卷可查看人物与分集线索，谜底默认折叠。</p></header>
         <div class="toolbar">
           <div class="filters" id="season-filters" aria-label="按剧集筛选"></div>
@@ -41,21 +47,26 @@
         <div class="case-grid" id="case-grid"></div>
       </section>
 
-      <section id="people" class="archive-section" aria-labelledby="people-title">
+      <section id="people" class="archive-section" data-screen hidden aria-labelledby="people-title">
         <header class="section-heading"><div><p class="eyebrow">人物档案 · 关联案卷</p><h2 id="people-title">探案人物</h2></div><p>从常驻探案小队到单元关键人物，顺着人物找回关联的案件。</p></header>
         <div class="people-grid" id="people-grid"></div>
         <details class="guest-index"><summary>查看单元人物索引 <span id="guest-count"></span></summary><div id="guest-people"></div></details>
       </section>
 
-      <section id="career" class="archive-section" aria-labelledby="career-title">
-        <header class="section-heading"><div><p class="eyebrow">官职簿 · 随剧情推进</p><h2 id="career-title">两位主角的仕途</h2></div><p>按剧情先后查看任官、离任与授命。展开可跳转到对应案卷。</p></header>
-        <div class="career-grid" id="career-grid"></div>
+      <section id="career" class="archive-section" data-screen hidden aria-labelledby="career-title">
+        <header class="section-heading"><div><p class="eyebrow">官职簿 · 随剧情推进</p><h2 id="career-title">两位主角的仕途</h2></div><p>对照剧中任命和唐制品级。展开条目，可查看任职集数、官品依据和关联案卷。</p></header>
+        <p class="route-note">唐制分正、从与上、下阶。州县官的品级还取决于辖地等级，品级不明的条目保留范围或注明依据。</p><div class="career-grid" id="career-grid"></div>
       </section>
 
-      <section id="sources" class="archive-section" aria-labelledby="sources-title">
-        <header class="section-heading"><div><p class="eyebrow">收录说明 · 分集溯源</p><h2 id="sources-title">案卷校勘</h2></div><p>分集可交叠，遇到一集承接两案时分别标记。</p></header>
+      <section id="spinoffs" class="archive-section" data-screen hidden aria-labelledby="spinoffs-title">
+        <header class="section-heading"><div><p class="eyebrow">别卷 · 衍生短剧</p><h2 id="spinoffs-title">唐诡外传</h2></div><p>按首播顺序读衍生作品。每部单列主案、人物和出处。</p></header>
+        <div id="spinoff-list" class="spinoff-list"></div>
+      </section>
+
+      <section id="sources" class="archive-section" data-screen hidden aria-labelledby="sources-title">
+        <header class="section-heading"><div><p class="eyebrow">收录说明 · 分集溯源</p><h2 id="sources-title">案卷校勘</h2></div><p>这里按用途列出处。分集承接两案时分别标记。</p></header>
+        <div id="source-guide" class="source-guide"></div>
         <div id="source-list" class="source-list"></div>
-        <div class="source-links"><a href="https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e4%b9%8b%e9%95%bf%e5%ae%89%e3%80%8b%e9%87%8d%e7%a3%85%e5%9b%9e%e5%bd%92%ef%bc%81%e5%94%90%e8%af%a1%e5%b0%8f%e5%88%86%e9%98%9f/" target="_blank" rel="noreferrer">长信传媒 · 长安八案 ↗</a><a href="https://peking.bjd.com.cn/content/s69463bcee4b0687a288e96df.html" target="_blank" rel="noreferrer">北京市广电局 · 奇谭两案 ↗</a></div>
       </section>
     </div>
   </main>

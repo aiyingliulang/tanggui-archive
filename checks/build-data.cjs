@@ -26,12 +26,17 @@ const people = [
   { id:"xue", name:"薛环", actor:"石悦安鑫", role:"探案小队 · 随行", bio:"原随侍裴喜君，后来拜卢凌风为师，随队查访、护卫，也逐渐能够独当一面。" }
 ];
 const assets = research("assets");
+const { spinoffs, guide, ranks, seasonSources, caseVisuals, portraits } = require("../content/revision.json");
 const careers = research("careers");
+for (const person of careers) {
+  for (const entry of person.entries) entry.rank = ranks[entry.title];
+}
 const cases = [];
 for (const season of seasons) {
   const rows = research(season.id + "-cases");
   const episodes = research(season.id + "-episodes");
   season.episodeLinks = episodes.map(ep => ep.url);
+  season.extraSource = seasonSources[season.id];
   rows.forEach(({from,to,extra=[],...record}, index) => {
     const id = season.id + "-" + (index + 1);
     cases.push({
@@ -39,11 +44,18 @@ for (const season of seasons) {
       people: record.people.map(name => ["公主","长公主"].includes(name) ? "太平公主" : name),
       episodes: [...Array.from({length:to-from+1}, (_,n) => from+n), ...extra],
       reference: episodes.find(ep => ep.n === from)?.url || season.reference,
-      image: assets[id]
+      image: {
+        kind: "illustration",
+        file: "assets/clue-" + id + ".svg",
+        label: caseVisuals[id].label,
+        note: caseVisuals[id].note,
+        source: episodes.find(ep => ep.n === from)?.url || season.reference
+      },
+      still: caseVisuals[id].still
     });
   });
 }
-for (const person of people) person.image = assets[person.id];
+for (const person of people) person.image = portraits[person.id] || assets[person.id];
 const file = path.join(root, "dist", "data.js");
-fs.writeFileSync(file, "window.TangArchive = " + JSON.stringify({ seasons, cases, people, careers, hero: assets.hero }, null, 2) + ";\n");
+fs.writeFileSync(file, "window.TangArchive = " + JSON.stringify({ seasons, cases, people, careers, spinoffs, guide, hero: assets.hero }, null, 2) + ";\n");
 console.log("Compiled " + cases.length + " cases");

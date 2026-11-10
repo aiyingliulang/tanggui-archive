@@ -1,6 +1,6 @@
 "use strict";
 
-const { seasons, cases, people, careers, hero } = window.TangArchive;
+const { seasons, cases, people, careers, hero, spinoffs, guide } = window.TangArchive;
 const { filterCases, collectGuests, formatEpisodes, groupEpisodes } = window.ArchiveUtils;
 const $ = selector => document.querySelector(selector);
 const escape = value => String(value ?? "").replace(/[&<>"']/g, ch => ({
@@ -13,6 +13,8 @@ const dialog = $("#record-dialog");
 const search = $("#case-search");
 const state = { season: "all", query: "", savedOnly: false, saved: loadSaved() };
 let restoreFocus;
+let activeScreen;
+const screens = [...document.querySelectorAll("[data-screen]")];
 
 function loadSaved() {
   try {
@@ -25,6 +27,21 @@ function loadSaved() {
 
 function imageTag(image, className, alt, loading = "lazy") {
   return image ? `<img class="${className}" src="${escape(image.file)}" alt="${escape(alt)}" loading="${loading}" decoding="async">` : "";
+}
+
+function sourceLink([label, url]) {
+  return `<a href="${escape(url)}" target="_blank" rel="noreferrer">${escape(label)} ↗</a>`;
+}
+
+function visualTag(item, detail = false) {
+  const kind = item.image.kind === "still" ? "原剧画面" : "线索插图";
+  const caption = detail
+    ? `<strong>${escape(item.image.label)}</strong><span>${escape(item.image.note)}</span>`
+    : `<span>${escape(item.image.label)}</span>`;
+  return `<figure class="case-visual ${item.image.kind}">
+    ${imageTag(item.image, "case-image", item.image.label, detail ? "eager" : "lazy")}
+    <figcaption><small>${kind}</small>${caption}</figcaption>
+  </figure>`;
 }
 
 function caseLinks(ids) {
@@ -51,7 +68,7 @@ function renderCases() {
     const season = seasonIndex.get(item.season);
     return `<article class="case-card" data-volume="${season.id}">
       <a href="#case/${item.id}" class="case-cover" aria-label="查阅${escape(item.title)}">
-        ${imageTag(item.image, "case-image", item.image ? `${season.title}剧照` : "")}
+        ${visualTag(item)}
         <span class="case-number">${season.mark}卷 <b>${String(item.order).padStart(2, "0")}</b></span>
       </a>
       <div class="case-body">
@@ -68,7 +85,7 @@ function renderPeople() {
   $("#people-grid").innerHTML = people.map(person => {
     const ids = cases.filter(item => item.people.includes(person.name)).map(item => item.id);
     return `<article class="person-card">
-      ${imageTag(person.image, "person-image", `${person.actor}饰${person.name}`)}
+      <div class="person-portrait">${imageTag(person.image, "person-image", `${person.actor}饰${person.name}`)}</div>
       <div class="person-content"><span class="person-role">${escape(person.role)}</span>
       <h3 class="person-name">${escape(person.name)}</h3><small>${escape(person.actor)} 饰</small>
       <p>${escape(person.bio)}</p><a class="portrait-credit" href="${escape(person.image.source)}" target="_blank" rel="noreferrer">角色图来源 ↗</a>
@@ -84,14 +101,41 @@ function renderCareers() {
   $("#career-grid").innerHTML = careers.map(person => `<article class="career-card">
     <h3>${escape(person.name)}</h3>
     <ol class="career-timeline">${person.entries.map((entry, index) => `<li><details ${index === 0 ? "open" : ""}>
-      <summary><span class="era">${escape(seasonIndex.get(entry.season).short)}</span><span>${escape(entry.title)} <small>第 ${entry.episode} 集</small></span></summary>
+      <summary><span class="era">${escape(seasonIndex.get(entry.season).short)}</span><span>${escape(entry.title)} <small>第 ${entry.episode} 集</small></span><strong class="rank-label">${escape(entry.rank.label)}</strong></summary>
       <p>${escape(entry.note)}</p>
+      <p class="rank-note">${escape(entry.rank.note)} ${entry.rank.source ? sourceLink(entry.rank.source) : ""}</p>
       <div class="chips">${caseLinks(entry.cases)}${entry.source ? `<a href="${escape(entry.source)}" target="_blank" rel="noreferrer">查看任职出处 ↗</a>` : ""}</div>
     </details></li>`).join("")}</ol>
   </article>`).join("");
 }
 
+function renderSpinoffs() {
+  $("#spinoff-list").innerHTML = spinoffs.map(item => `<article class="spinoff-card" id="spin-${item.id}">
+    <div class="spinoff-label"><span class="seal" aria-hidden="true">外<br>传</span><span>${item.year} · ${escape(item.tag)}</span></div>
+    <h3>${escape(item.title)}</h3><p class="spinoff-cast">${escape(item.cast)}</p>
+    <h4>${escape(item.caseName)}</h4><p>${escape(item.summary)}</p>
+    <ul class="spinoff-clues">${item.threads.map(line => `<li>${escape(line)}</li>`).join("")}</ul>
+    <div class="source-links">${item.links.map(sourceLink).join("")}</div>
+    <div class="chips">${item.related.map(([id,label]) => `<a class="chip" href="#case/${id}">${escape(label)} · ${escape(caseIndex.get(id).title)} ↗</a>`).join("")}</div>
+  </article>`).join("");
+}
+
+function renderHome() {
+  const entries = [
+    ["cases", "案卷", "正传与《唐诡奇谭》", "查阅 26 宗单元案，按剧集、人物或线索检索。"],
+    ["people", "人物", "探案小队", "查看六位常驻角色，从人物找到对应案卷。"],
+    ["career", "官职", "两位主角的仕途", "对照苏无名、卢凌风的任职变迁与唐制品级。"],
+    ["spinoffs", "外传", "三部衍生短剧", "翻看民国唐府、悲田院与九重楼三条案线。"]
+  ];
+  $("#home-entries").innerHTML = entries.map(([id, label, title, note]) =>
+    `<a class="home-entry" href="#${id}"><span class="eyebrow">${label}</span><h3>${title}</h3><p>${note}</p><span class="home-arrow" aria-hidden="true">↗</span></a>`
+  ).join("");
+}
+
 function renderSources() {
+  $("#source-guide").innerHTML = guide.map(group =>
+    `<article><h3>${escape(group.title)}</h3><p>${escape(group.note)}</p><div class="source-links">${group.links.map(sourceLink).join("")}</div></article>`
+  ).join("");
   $("#source-list").innerHTML = seasons.map(season => {
     const records = cases.filter(item => item.season === season.id);
     const episodes = groupEpisodes(records, season.episodes);
@@ -99,10 +143,10 @@ function renderSources() {
     return `<details class="source-card">
       <summary><span class="volume-mark">${season.mark}</span><span><strong>${escape(season.title)}</strong><small>${season.year} · ${records.length} 案 · ${covered}/${season.episodes} 集已编目</small></span></summary>
       <p>${escape(season.summary)}</p>
-      <div class="source-links"><a href="${escape(season.official)}" target="_blank" rel="noreferrer">爱奇艺剧集页 ↗</a><a href="${escape(season.reference)}" target="_blank" rel="noreferrer">分集参考 ↗</a></div>
+      <div class="source-links"><a href="${escape(season.official)}" target="_blank" rel="noreferrer">爱奇艺剧集页 ↗</a><a href="${escape(season.reference)}" target="_blank" rel="noreferrer">分集参考 ↗</a>${sourceLink(season.extraSource)}</div>
       <ol class="episode-grid">${episodes.map(ep => `<li><a class="episode-link" href="${escape(season.episodeLinks[ep.number - 1])}" target="_blank" rel="noreferrer">第 ${ep.number} 集 ↗</a><div class="chips">${caseLinks(ep.caseIds)}</div></li>`).join("")}</ol>
     </details>`;
-  }).join("") + `<p class="scope-note">主档收录杨旭文与杨志刚共同主演的三部长剧及《唐诡奇谭》。《长安县尉》《九重楼》等其他主演组合的衍生短剧另列作品。《蜀道》开拍后待播出再编目。案卷使用原创梗概，剧照来源见各档案，剧集及剧照权益归相关权利人。</p>`;
+  }).join("") + `<p class="scope-note">主档收录杨旭文与杨志刚共同主演的三部长剧及《唐诡奇谭》。三部衍生短剧见<a href="#spinoffs">外传</a>。《蜀道》开拍后待播出再编目。案卷使用原创梗概，剧照来源见各档案，剧集及剧照权益归相关权利人。</p>`;
 }
 
 function renderCase(item) {
@@ -110,7 +154,7 @@ function renderCase(item) {
   const previous = cases[cases.indexOf(item) - 1];
   const next = cases[cases.indexOf(item) + 1];
   $("#record-content").innerHTML = `
-    ${imageTag(item.image, "dialog-image", `${season.title}剧照`, "eager")}
+    ${visualTag(item, true)}
     <div class="dialog-body"><div class="dialog-title">
       <div><p class="eyebrow">${escape(season.short)} · 第 ${item.order} 案 · ${formatEpisodes(item.episodes)}</p>
       <h2 id="record-title">${escape(item.title)}</h2></div>${bookmark(item)}
@@ -118,10 +162,11 @@ function renderCase(item) {
     <div class="case-place">${escape(item.place)}</div>
     <p class="case-intro">${escape(item.hook)}</p>
     <h3>案情梗概</h3><p>${escape(item.summary)}</p>
+    ${item.still ? `<aside class="case-still"><h3>案中画面 · 第 ${item.still.episode} 集</h3>${visualTag({image:item.still}, true)}<p>${sourceLink(["原剧画面出处", item.still.source])}</p></aside>` : ""}
     <h3>查案线索</h3><ul class="clues">${item.clues.map(clue => `<li>${escape(clue)}</li>`).join("")}</ul>
     <h3>案中人物</h3><div class="chips">${item.people.map(name => `<button type="button" data-person="${escape(name)}" class="chip">${escape(name)} ↗</button>`).join("")}</div>
     <details class="spoiler"><summary>展开案件真相 · 含剧透</summary><p>${escape(item.outcome)}</p></details>
-    <div class="source-links"><a href="${escape(item.reference || season.reference)}" target="_blank" rel="noreferrer">分集出处 ↗</a>${item.image ? `<a href="${escape(item.image.source)}" target="_blank" rel="noreferrer">剧照出处 ↗</a>` : ""}<a href="${escape(season.official)}" target="_blank" rel="noreferrer">观看剧集 ↗</a></div>
+    <div class="source-links"><a href="${escape(item.reference || season.reference)}" target="_blank" rel="noreferrer">分集与插图依据 ↗</a>${sourceLink(season.extraSource)}<a href="${escape(season.official)}" target="_blank" rel="noreferrer">观看剧集 ↗</a></div>
     <nav class="case-nav" aria-label="前后案卷">
       ${previous ? `<a href="#case/${previous.id}">← ${escape(previous.title)}</a>` : "<span></span>"}
       ${next ? `<a href="#case/${next.id}">${escape(next.title)} →</a>` : "<span></span>"}
@@ -129,9 +174,24 @@ function renderCase(item) {
   dialog.scrollTop = 0;
 }
 
+function showScreen(id) {
+  if (id === activeScreen) return;
+  activeScreen = id;
+  for (const section of screens) section.hidden = section.id !== id;
+  $("#route-shell").hidden = id === "top";
+  const heading = document.getElementById(id).querySelector("h2");
+  document.title = id === "top" ? "唐诡宇宙 · 大唐诡案档案馆" : heading.textContent + " · 唐诡宇宙";
+  for (const link of document.querySelectorAll("[data-route]")) {
+    if (link.dataset.route === id) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  }
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
 function syncHash() {
   const item = caseIndex.get(location.hash.slice(6));
   if (location.hash.startsWith("#case/") && item) {
+    showScreen(activeScreen || "cases");
     renderCase(item);
     if (!dialog.open) {
       restoreFocus = document.activeElement;
@@ -139,8 +199,10 @@ function syncHash() {
     } else {
       $(".close-dialog").focus();
     }
-  } else if (dialog.open) {
-    dialog.close();
+  } else {
+    if (dialog.open) dialog.close();
+    const id = location.hash.slice(1);
+    showScreen(screens.some(section => section.id === id) ? id : "top");
   }
 }
 
@@ -156,9 +218,7 @@ function findPerson(name) {
   state.query = name;
   search.value = name;
   renderCases();
-  location.hash = "cases";
-  if (dialog.open) dialog.close();
-  search.focus();
+  openSearch();
 }
 
 function toggleSave(button) {
@@ -177,7 +237,7 @@ function toggleSave(button) {
 }
 
 $("#hero-ledger").innerHTML = [
-  [seasons.length, "部已播作品"], [cases.length, "宗单元诡案"], [seasons.reduce((total, s) => total + s.episodes, 0), "集分集索引"]
+  [seasons.length, "部主档作品"], [cases.length, "宗单元诡案"], [seasons.reduce((total, s) => total + s.episodes, 0), "集分集索引"]
 ].map(([n, label]) => `<div><strong>${n}</strong><span>${label}</span></div>`).join("");
 if (hero) {
   $(".hero").style.setProperty("--hero-image", `url("${hero.file}")`);
@@ -186,17 +246,22 @@ if (hero) {
 $("#season-filters").innerHTML = [{ id: "all", short: "全部" }, ...seasons].map(s =>
   `<button data-season="${s.id}" aria-pressed="false" type="button">${escape(s.short)}</button>`
 ).join("");
+renderHome();
 renderCases();
 renderPeople();
 renderCareers();
+renderSpinoffs();
 renderSources();
 syncHash();
 
 search.addEventListener("input", () => { state.query = search.value; renderCases(); });
-$(".search-toggle").addEventListener("click", () => {
+function openSearch() {
   location.hash = "cases";
+  if (dialog.open) dialog.close();
+  showScreen("cases");
   search.focus();
-});
+}
+$(".search-toggle").addEventListener("click", openSearch);
 $("#saved-toggle").addEventListener("click", () => {
   state.savedOnly = !state.savedOnly;
   renderCases();
@@ -204,9 +269,9 @@ $("#saved-toggle").addEventListener("click", () => {
 $(".close-dialog").addEventListener("click", () => dialog.close());
 dialog.addEventListener("close", () => {
   if (!location.hash.startsWith("#case/")) return;
-  history.replaceState(null, "", "#cases");
+  history.replaceState(null, "", "#" + activeScreen);
   if (restoreFocus?.isConnected) restoreFocus.focus({ preventScroll: true });
-  else $("#cases").scrollIntoView();
+  else document.getElementById(activeScreen).querySelector("h1, h2")?.focus();
 });
 window.addEventListener("hashchange", syncHash);
 

@@ -48,6 +48,10 @@ window.TangArchive = {
         "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-34",
         "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-35",
         "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36"
+      ],
+      "extraSource": [
+        "长信传媒 · 初卷八案",
+        "https://ghyculturemedia.com/%e5%8f%a4%e5%85%b8%e6%8e%a2%e6%a1%88%e5%89%a7%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e3%80%8b9-27%e9%a6%96%e6%92%ad-%e8%a7%a3%e8%b0%9c%e5%bc%8f%e7%a0%b4%e8%8e%b7%e5%85%ab/?lang=cn"
       ]
     },
     {
@@ -102,6 +106,10 @@ window.TangArchive = {
         "https://www.tvmao.com/drama/I2BiY2lt/episode/12-38",
         "https://www.tvmao.com/drama/I2BiY2lt/episode/12-39",
         "https://www.tvmao.com/drama/I2BiY2lt/episode/13-40"
+      ],
+      "extraSource": [
+        "网易号 · 西行八案对照",
+        "https://www.163.com/dy/article/J8N1DM0G0517D18B.html"
       ]
     },
     {
@@ -156,6 +164,10 @@ window.TangArchive = {
         "https://www.tvmao.com/kanju/JltpZ2hr/episode/12-38",
         "https://www.tvmao.com/kanju/JltpZ2hr/episode/12-39",
         "https://www.tvmao.com/kanju/JltpZ2hr/episode/13-40"
+      ],
+      "extraSource": [
+        "长信传媒 · 长安八案",
+        "https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e4%b9%8b%e9%95%bf%e5%ae%89%e3%80%8b%e9%87%8d%e7%a3%85%e5%9b%9e%e5%bd%92%ef%bc%81%e5%94%90%e8%af%a1%e5%b0%8f%e5%88%86%e9%98%9f/"
       ]
     },
     {
@@ -191,6 +203,10 @@ window.TangArchive = {
         "https://www.tvmao.com/kanju/ailhZF9m/episode/6-19",
         "https://www.tvmao.com/kanju/ailhZF9m/episode/6-20",
         "https://www.tvmao.com/kanju/ailhZF9m/episode/6-21"
+      ],
+      "extraSource": [
+        "北京市广电局 · 奇谭两案",
+        "https://peking.bjd.com.cn/content/s69463bcee4b0687a288e96df.html"
       ]
     }
   ],
@@ -228,9 +244,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode",
       "image": {
-        "file": "assets/s1-1.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLBOoKDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-1.svg",
+        "label": "鬼市红茶",
+        "note": "风靡长安的红茶把新娘失踪案牵到了鬼市。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode"
       }
     },
     {
@@ -266,9 +284,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7",
       "image": {
-        "file": "assets/s1-2.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-8",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLBSsL9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-2.svg",
+        "label": "驿馆巨蟒",
+        "note": "驿馆中出现的巨蟒是甘棠驿怪谈的关键。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7"
       }
     },
     {
@@ -306,9 +326,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9",
       "image": {
-        "file": "assets/s1-3.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/3-10",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLBStLDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-3.svg",
+        "label": "《石桥图》画卷",
+        "note": "画中的南州四子将接连发生的命案连到一起。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9"
       }
     },
     {
@@ -343,9 +365,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14",
       "image": {
-        "file": "assets/s1-4.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-15",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLB0tLDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-4.svg",
+        "label": "文庙投书",
+        "note": "从窗外扔入文庙的书，连接了目击与梦境。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14"
       }
     },
     {
@@ -381,9 +405,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18",
       "image": {
-        "file": "assets/s1-5.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-19",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLB8tKTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-5.svg",
+        "label": "包尸布上的药味",
+        "note": "药味把弃尸线索引向众生堂。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18"
       }
     },
     {
@@ -421,9 +447,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22",
       "image": {
-        "file": "assets/s1-6.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-23",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLR=qK9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-6.svg",
+        "label": "宁湖巨鼍",
+        "note": "宁湖巨鼍与鼍神社的祭祀、威胁直接相关。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
       }
     },
     {
@@ -458,9 +486,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27",
       "image": {
-        "file": "assets/s1-7.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/9-28",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLRGrLDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-7.svg",
+        "label": "人面花",
+        "note": "美容花料与洛阳女子的面部溃烂有关。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27"
       }
     },
     {
@@ -495,9 +525,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-32",
       "image": {
-        "file": "assets/s1-8.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-34",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLRSqK9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s1-8.svg",
+        "label": "参天楼与木鸟",
+        "note": "木鸟传书和楼中机关先后成为查案线索。",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-32"
       }
     },
     {
@@ -536,9 +568,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/I2BiY2lt/episode",
       "image": {
-        "file": "assets/s2-1.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/0-2",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLBWlKDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-1.svg",
+        "label": "成佛寺降魔壁画",
+        "note": "画中魔王与目击者描述的凶手相似。",
+        "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode"
       }
     },
     {
@@ -579,9 +613,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-7",
       "image": {
-        "file": "assets/s2-2.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-9",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLB0nMTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-2.svg",
+        "label": "独孤信多面印",
+        "note": "多面印使几名当事人的动机浮出水面。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-7"
       }
     },
     {
@@ -616,9 +652,19 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13",
       "image": {
-        "file": "assets/s2-3.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-14",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLB4rKpwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-3.svg",
+        "label": "风雪中的摩家店",
+        "note": "风雪让各路旅人同宿客店，命案在店中发生。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13"
+      },
+      "still": {
+        "file": "assets/scene-s2-3.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13",
+        "kind": "still",
+        "label": "摩家店内的老板娘",
+        "note": "风雪封路时，来客被她留在店里，赌局与命案随后在同一处发生。",
+        "episode": 13
       }
     },
     {
@@ -651,9 +697,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-16",
       "image": {
-        "file": "assets/s2-4.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-17",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLB8sLTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-4.svg",
+        "label": "千重渡官船",
+        "note": "众人乘官船过河，途中遭遇漩涡和凶兽。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-16"
       }
     },
     {
@@ -690,9 +738,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-18",
       "image": {
-        "file": "assets/s2-5.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/6-20",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLR=qLTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-5.svg",
+        "label": "通天犀",
+        "note": "寒州传说中的神犀与宋阿糜的过去有关。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-18"
       }
     },
     {
@@ -732,9 +782,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24",
       "image": {
-        "file": "assets/s2-6.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/8-26",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLRCtLDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-6.svg",
+        "label": "云鼎长生醉",
+        "note": "夜市名酒与城里的人口失踪案相连。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24"
       }
     },
     {
@@ -771,9 +823,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/10-31",
       "image": {
-        "file": "assets/s2-7.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/10-32",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLROoMTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-7.svg",
+        "label": "上仙坊来信",
+        "note": "书信牵出李云生前的旧情和隐秘身份。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/10-31"
       }
     },
     {
@@ -811,9 +865,19 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36",
       "image": {
-        "file": "assets/s2-8.webp",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/12-37",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLRWqMDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s2-8.svg",
+        "label": "敦煌供养人壁画",
+        "note": "曹家的供养传统和莫高窟壁画贯穿多宝的故事。",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36"
+      },
+      "still": {
+        "file": "assets/scene-s2-8.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36",
+        "kind": "still",
+        "label": "敦煌少年多宝",
+        "note": "多宝最初为探案小队介绍敦煌。随后，他的死把众人带进曹家命案。",
+        "episode": 36
       }
     },
     {
@@ -849,9 +913,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode",
       "image": {
-        "file": "assets/s3-1.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sLROqLTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-1.svg",
+        "label": "金桃中的舆图",
+        "note": "康国贡桃藏有牛皮舆图。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode"
       }
     },
     {
@@ -891,9 +957,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-6",
       "image": {
-        "file": "assets/s3-2.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/2-7",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sLROrMTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-2.svg",
+        "label": "成佛寺夜哭",
+        "note": "佛殿夜间传出的哭声令寺中与坊间不安。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-6"
       }
     },
     {
@@ -930,9 +998,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-12",
       "image": {
-        "file": "assets/s3-3.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/4-13",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sLR0nKpwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-3.svg",
+        "label": "白泽石像",
+        "note": "古庙内的瑞兽石像呼应众人进山所寻的白泽。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-12"
       }
     },
     {
@@ -971,9 +1041,19 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17",
       "image": {
-        "file": "assets/s3-4.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-18",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sLR4tL9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-4.svg",
+        "label": "一品紫蛇",
+        "note": "紫蛇连起孟不疑、太医署药园和案中交易。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+      },
+      "still": {
+        "file": "assets/scene-s3-4.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/6-21",
+        "kind": "still",
+        "label": "红药在雍州公堂",
+        "note": "红药的陈述把眼前命案与孟不疑、颜君羡之间的旧事连在一起。",
+        "episode": 21
       }
     },
     {
@@ -1011,9 +1091,19 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-22",
       "image": {
-        "file": "assets/s3-5.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-23",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sL7=lKDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-5.svg",
+        "label": "旗亭诗壁",
+        "note": "酒楼唱诗比试聚起宾客，刺杀也借宴席展开。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-22"
+      },
+      "still": {
+        "file": "assets/scene-s3-5.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-24",
+        "kind": "still",
+        "label": "阮氏酒楼的宾客",
+        "note": "诗会邀来文士与戏班，宴饮中的宾客随后卷入酒楼的刺杀。",
+        "episode": 24
       }
     },
     {
@@ -1051,9 +1141,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-26",
       "image": {
-        "file": "assets/s3-6.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-27",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sL7CsMTwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-6.svg",
+        "label": "韦杜阀阅残石",
+        "note": "两家的残石帮助卢凌风追查旧怨。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-26"
       }
     },
     {
@@ -1089,9 +1181,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31",
       "image": {
-        "file": "assets/s3-7.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-33",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sL7KoMDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-7.svg",
+        "label": "搐气袋与数字",
+        "note": "尸身旁的袋子和数字把多起命案连在一起。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31"
       }
     },
     {
@@ -1131,9 +1225,19 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35",
       "image": {
-        "file": "assets/s3-8.webp",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/12-37",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sL7KpL9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s3-8.svg",
+        "label": "特制马球",
+        "note": "为比赛所制的新球与看台机关有关。",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35"
+      },
+      "still": {
+        "file": "assets/scene-s3-8.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/13-40",
+        "kind": "still",
+        "label": "盛世马球赛场",
+        "note": "盔勒与大唐的比赛进入决胜阶段，赛场也是小队追查细作的最后一站。",
+        "episode": 40
       }
     },
     {
@@ -1184,9 +1288,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/ailhZF9m/episode",
       "image": {
-        "file": "assets/s4-1.webp",
-        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/0-2",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sLn4kL9wqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s4-1.svg",
+        "label": "红袍血书",
+        "note": "夹在旧红袍里的血字把小队引向解忧店。",
+        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode"
       }
     },
     {
@@ -1224,9 +1330,11 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/ailhZF9m/episode/5-16",
       "image": {
-        "file": "assets/s4-2.webp",
-        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/5-17",
-        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sMBClMDwqKB-3K78r.jpg"
+        "kind": "illustration",
+        "file": "assets/clue-s4-2.svg",
+        "label": "《眚宫歌》与马球杖",
+        "note": "画卷与马球杖把命案连回旧东宫。",
+        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/5-16"
       }
     }
   ],
@@ -1298,9 +1406,8 @@ window.TangArchive = {
       "role": "探案小队 · 随行",
       "bio": "原随侍裴喜君，后来拜卢凌风为师，随队查访、护卫，也逐渐能够独当一面。",
       "image": {
-        "file": "assets/xue.webp",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h",
-        "url": "https://pix2.tvzhe.com/thumb/character/446/247/260x346.jpg"
+        "file": "assets/xue-changan.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/actors"
       }
     }
   ],
@@ -1316,7 +1423,15 @@ window.TangArchive = {
           "cases": [
             "s1-1"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode",
+          "rank": {
+            "label": "正四品下",
+            "note": "按金吾卫翊府中郎将。史载其督京城六街巡警。",
+            "source": [
+              "《唐六典》卷二十五 · 金吾卫",
+              "https://zh.wikisource.org/wiki/唐六典/卷25"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1327,7 +1442,11 @@ window.TangArchive = {
             "s1-1",
             "s1-2"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-6"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-6",
+          "rank": {
+            "label": "离任",
+            "note": "这是免官后的身份变化。"
+          }
         },
         {
           "season": "s1",
@@ -1337,7 +1456,11 @@ window.TangArchive = {
           "cases": [
             "s1-2"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7",
+          "rank": {
+            "label": "幕僚 · 无官品",
+            "note": "私人延请，属于随行办案身份。"
+          }
         },
         {
           "season": "s1",
@@ -1347,7 +1470,15 @@ window.TangArchive = {
           "cases": [
             "s1-3"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9",
+          "rank": {
+            "label": "约七至八品",
+            "note": "参照唐制，上州司法参军事从七品下，中州正八品下，下州从八品下。剧中为暂代，南州等第未确认。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1357,7 +1488,15 @@ window.TangArchive = {
           "cases": [
             "s1-4"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14",
+          "rank": {
+            "label": "约七至八品",
+            "note": "上州司户参军事从七品下，中州正八品下，下州从八品下。南州等第未确认。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1367,7 +1506,15 @@ window.TangArchive = {
           "cases": [
             "s1-5"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18",
+          "rank": {
+            "label": "约九品",
+            "note": "参照普通县尉，上县从九品上，中县及以下通常从九品下。橘县的等第以剧中为准，未见明确。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1377,7 +1524,11 @@ window.TangArchive = {
           "cases": [
             "s1-5"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21",
+          "rank": {
+            "label": "离任",
+            "note": "这一节点记录被罢免。"
+          }
         },
         {
           "season": "s1",
@@ -1387,7 +1538,15 @@ window.TangArchive = {
           "cases": [
             "s1-8"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-33"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-33",
+          "rank": {
+            "label": "约正七品下",
+            "note": "参照《唐六典》京府法曹参军事。剧中称雍州司法参军，历史记载的机构名和官称随时期有变化。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1398,7 +1557,15 @@ window.TangArchive = {
             "s1-8",
             "s2-1"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36",
+          "rank": {
+            "label": "从四品上",
+            "note": "中央审理刑狱的大理寺副长官。",
+            "source": [
+              "《唐六典》卷十八 · 大理寺",
+              "https://zh.wikisource.org/wiki/唐六典/卷18"
+            ]
+          }
         },
         {
           "season": "s2",
@@ -1409,7 +1576,15 @@ window.TangArchive = {
             "s2-2",
             "s2-6"
           ],
-          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/2-7"
+          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/2-7",
+          "rank": {
+            "label": "约九品",
+            "note": "参照普通县尉；上县从九品上，中县及以下通常从九品下。剧中云鼎县的等第未确认。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s2",
@@ -1420,7 +1595,11 @@ window.TangArchive = {
             "s2-8",
             "s3-1"
           ],
-          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/13-40"
+          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/13-40",
+          "rank": {
+            "label": "临时差遣",
+            "note": "这是奉命护送贡品的任务。"
+          }
         },
         {
           "season": "s3",
@@ -1432,7 +1611,15 @@ window.TangArchive = {
             "s3-2",
             "s3-8"
           ],
-          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-5"
+          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-5",
+          "rank": {
+            "label": "约正七品下",
+            "note": "参照京府法曹参军事品级；沿用该职上一条的历史对照口径。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         }
       ]
     },
@@ -1447,7 +1634,15 @@ window.TangArchive = {
           "cases": [
             "s1-1"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode",
+          "rank": {
+            "label": "从八品下",
+            "note": "长安县属于京县，按京县尉官品。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1459,7 +1654,15 @@ window.TangArchive = {
             "s1-3",
             "s1-4"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-6"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-6",
+          "rank": {
+            "label": "约五至六品",
+            "note": "上州司马从五品下，中州正六品下，下州从六品上。南州等第未确认。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1469,7 +1672,15 @@ window.TangArchive = {
           "cases": [
             "s1-6"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22",
+          "rank": {
+            "label": "约五至六品",
+            "note": "上州司马从五品下，中州正六品下，下州从六品上。宁湖等第未确认。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1479,7 +1690,15 @@ window.TangArchive = {
           "cases": [
             "s1-7"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27",
+          "rank": {
+            "label": "约正四品下",
+            "note": "按唐代京府长史旧制类比。《唐六典》明确记雍州长史旧秩，剧中授的是洛州长史，苏无名拒受斜封。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         },
         {
           "season": "s1",
@@ -1490,7 +1709,15 @@ window.TangArchive = {
             "s1-8",
             "s2-1"
           ],
-          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36"
+          "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36",
+          "rank": {
+            "label": "从七品下",
+            "note": "《唐六典》所列乾陵署丞，协助陵令管理陵寝。",
+            "source": [
+              "《唐六典》卷十四 · 太常寺",
+              "https://zh.wikisource.org/wiki/唐六典/卷14"
+            ]
+          }
         },
         {
           "season": "s2",
@@ -1500,7 +1727,15 @@ window.TangArchive = {
           "cases": [
             "s2-1"
           ],
-          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode"
+          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode",
+          "rank": {
+            "label": "从四品上",
+            "note": "以剧中继续履职的大理寺少卿为准。",
+            "source": [
+              "《唐六典》卷十八 · 大理寺",
+              "https://zh.wikisource.org/wiki/唐六典/卷18"
+            ]
+          }
         },
         {
           "season": "s2",
@@ -1512,7 +1747,11 @@ window.TangArchive = {
             "s2-6",
             "s2-8"
           ],
-          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/2-7"
+          "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode/2-7",
+          "rank": {
+            "label": "白衣 · 无官品",
+            "note": "这一节点记录削职后的身份。"
+          }
         },
         {
           "season": "s3",
@@ -1523,7 +1762,11 @@ window.TangArchive = {
             "s3-1",
             "s3-2"
           ],
-          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/0-3"
+          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/0-3",
+          "rank": {
+            "label": "品级未见",
+            "note": "剧中授职用于督办刑狱，所引史料未列这一完整官名。"
+          }
         },
         {
           "season": "s3",
@@ -1534,7 +1777,11 @@ window.TangArchive = {
             "s3-4",
             "s3-5"
           ],
-          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17",
+          "rank": {
+            "label": "剧中虚衔",
+            "note": "名义上的暗探职衔。"
+          }
         },
         {
           "season": "s3",
@@ -1546,8 +1793,184 @@ window.TangArchive = {
             "s3-7",
             "s4-2"
           ],
-          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31"
+          "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31",
+          "rank": {
+            "label": "从八品下",
+            "note": "万年县属于京县，按京县尉官品。",
+            "source": [
+              "《唐六典》卷三十 · 州府县官",
+              "https://zh.wikisource.org/wiki/唐六典/卷30"
+            ]
+          }
         }
+      ]
+    }
+  ],
+  "spinoffs": [
+    {
+      "id": "traveller",
+      "year": 2022,
+      "tag": "民国奇探",
+      "title": "大唐来的苏无名",
+      "cast": "杨志刚 饰苏无名 · 郜思雯 饰封灵鹭 · 李祉默 饰唐渊",
+      "caseName": "民国唐府疑案",
+      "summary": "唐代武功县尉苏无名穿越到民国，在祠堂救下唐渊，并结识戏班花旦封灵鹭。唐府接连有人遇害，方相杀手在暗处出没，苏无名和封灵鹭一起追查唐家与戏班的旧事。",
+      "threads": [
+        "唐府祠堂的火刑",
+        "自称太平公主的唐渊",
+        "方相面具与戏班"
+      ],
+      "related": [
+        [
+          "s1-1",
+          "方相面具的呼应"
+        ]
+      ],
+      "links": [
+        [
+          "长信传媒 · 大唐来的苏无名",
+          "https://ghyculturemedia.com/drama-the-nameless-time-traveller/?lang=cn"
+        ],
+        [
+          "抖音 · 长信小剧场片段",
+          "https://www.douyin.com/video/7183900555524230435"
+        ],
+        [
+          "百度百科 · 演员资料",
+          "https://baike.baidu.com/item/大唐来的苏无名/62485415"
+        ]
+      ]
+    },
+    {
+      "id": "county",
+      "year": 2025,
+      "tag": "长安旧案",
+      "title": "唐诡奇谭之长安县尉",
+      "cast": "王杍逸 饰韦韬 · 赵佳 饰焦玉",
+      "caseName": "悲田院连环毒杀案",
+      "summary": "韦韬刚任长安县尉，悲田院便有八名老人离奇死去。他循毒草与黑莲印记查到焦玉所在的甘霖医坊，再从夜半笛声与八瓣莲花的布置中追查命案。",
+      "threads": [
+        "悲田院八名死者",
+        "黑莲印记与失踪毒草",
+        "夜半诡笛与甘霖医坊"
+      ],
+      "related": [
+        [
+          "s3-6",
+          "韦韬在正传中的案件"
+        ]
+      ],
+      "links": [
+        [
+          "长信传媒 · 长安县尉",
+          "https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e8%af%a1%e5%a5%87%e8%b0%ad%e4%b9%8b%e9%95%bf%e5%ae%89%e5%8e%bf%e5%b0%89%e3%80%8b/"
+        ],
+        [
+          "爱奇艺 · 长安县尉正片",
+          "https://www.iqiyi.com/a_miejeqszxt.html"
+        ]
+      ]
+    },
+    {
+      "id": "nine",
+      "year": 2025,
+      "tag": "地宫悬案",
+      "title": "唐诡奇谭之九重楼",
+      "cast": "杨志刚 饰苏无名 · 郭迦南 饰韩棠／韩棣 · 郜思雯 饰裴喜君",
+      "caseName": "九重楼血案",
+      "summary": "盛世马球案后，一连串绑架把苏无名引向旧日的九重楼血案。三位被绑者都曾指认柳容杀夫。苏无名和雍州司马袁充被带入一座仿九重楼建造的地宫，只能重新核对三人的证词。",
+      "threads": [
+        "三位旧案证人",
+        "仿九重楼建造的地宫",
+        "柳容的杀夫指控"
+      ],
+      "related": [
+        [
+          "s3-8",
+          "故事衔接的正传案件"
+        ]
+      ],
+      "links": [
+        [
+          "爱奇艺 · 九重楼",
+          "https://www.iqiyi.com/a_1vgjcs0wvrp.html"
+        ],
+        [
+          "电视猫 · 九重楼分集与演员",
+          "https://www.tvmao.com/kanju/X2JkYHMn"
+        ]
+      ]
+    }
+  ],
+  "guide": [
+    {
+      "title": "片方与播出平台",
+      "note": "用来核对单元名、主演和作品范围。",
+      "links": [
+        [
+          "长信传媒 · 初卷八案",
+          "https://ghyculturemedia.com/%e5%8f%a4%e5%85%b8%e6%8e%a2%e6%a1%88%e5%89%a7%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e3%80%8b9-27%e9%a6%96%e6%92%ad-%e8%a7%a3%e8%b0%9c%e5%bc%8f%e7%a0%b4%e8%8e%b7%e5%85%ab/?lang=cn"
+        ],
+        [
+          "长信传媒 · 长安八案",
+          "https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e6%9c%9d%e8%af%a1%e4%ba%8b%e5%bd%95%e4%b9%8b%e9%95%bf%e5%ae%89%e3%80%8b%e9%87%8d%e7%a3%85%e5%9b%9e%e5%bd%92%ef%bc%81%e5%94%90%e8%af%a1%e5%b0%8f%e5%88%86%e9%98%9f/"
+        ],
+        [
+          "北京市广电局 · 奇谭两案",
+          "https://peking.bjd.com.cn/content/s69463bcee4b0687a288e96df.html"
+        ],
+        [
+          "长信传媒 · 大唐来的苏无名",
+          "https://ghyculturemedia.com/drama-the-nameless-time-traveller/?lang=cn"
+        ],
+        [
+          "长信传媒 · 长安县尉",
+          "https://ghyculturemedia.com/%e3%80%8a%e5%94%90%e8%af%a1%e5%a5%87%e8%b0%ad%e4%b9%8b%e9%95%bf%e5%ae%89%e5%8e%bf%e5%b0%89%e3%80%8b/"
+        ],
+        [
+          "爱奇艺 · 九重楼",
+          "https://www.iqiyi.com/a_1vgjcs0wvrp.html"
+        ]
+      ]
+    },
+    {
+      "title": "分集与媒体对照",
+      "note": "分集链接用于定位剧情。西行的单元梗概另用媒体复盘对照。",
+      "links": [
+        [
+          "网易号 · 西行八案对照",
+          "https://www.163.com/dy/article/J8N1DM0G0517D18B.html"
+        ],
+        [
+          "河南广播电视台 · 长安开播报道",
+          "https://www.hntv.tv/news/0/1987074254875922434"
+        ],
+        [
+          "电视指南 · 长安人物薛环",
+          "https://www.tvzn.com/16864/role/254336.html"
+        ]
+      ]
+    },
+    {
+      "title": "唐代官制原文",
+      "note": "官品依据见卷次。地方官品级需结合州县等第。",
+      "links": [
+        [
+          "《唐六典》卷十四 · 太常寺",
+          "https://zh.wikisource.org/wiki/唐六典/卷14"
+        ],
+        [
+          "《唐六典》卷十八 · 大理寺",
+          "https://zh.wikisource.org/wiki/唐六典/卷18"
+        ],
+        [
+          "《唐六典》卷二十五 · 金吾卫",
+          "https://zh.wikisource.org/wiki/唐六典/卷25"
+        ],
+        [
+          "《唐六典》卷三十 · 州府县官",
+          "https://zh.wikisource.org/wiki/唐六典/卷30"
+        ]
       ]
     }
   ],
