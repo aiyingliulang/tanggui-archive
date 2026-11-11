@@ -45,3 +45,11 @@
 2026 年 11 月 11 日，按用户反馈将 26 宗案卷的封面换为对应单元内的原剧画面，并附图意、集数与来源。人物卡、排版与单元人物切换控件的视觉方案由七牛云海外 Modelink 入口的 Claude Opus 5.5 通过 OpenCode 实际生成，Codex 负责剧照核对、功能整合和验收。方案记录见 content/frontend-design.json，样式见 dist/opus-design.css。
 
 人物海报在卡片上方完整展示，正文在下方。单元人物可在按拼音与按案卷两种视图间切换，按案卷视图按作品与播出单元顺序排列，可跳转案卷，也可从人物名字继续检索。
+
+## 自有域名与源码（2026-11-11）
+
+在线访问：https://aiyingliulang.qd.je/tanggui/
+博客介绍：https://aiyingliulang.qd.je/projects/tanggui-archive
+GitHub 私有仓库：https://github.com/aiyingliulang/tanggui-archive
+
+部署记录见 deploy/RELEASE-20261111.md。静态网页由现有江湖志与博客共用服务器的 Nginx 提供。
