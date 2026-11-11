@@ -486,5 +486,217 @@
       "file": "assets/xue-changan.webp",
       "source": "https://www.tvmao.com/kanju/JltpZ2hr/actors"
     }
+  },
+  "covers": {
+    "s1-1": {
+      "file": "assets/cover-s1-1.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-5",
+      "episode": 5,
+      "label": "红茶案中的长安县令",
+      "note": "元来任长安县令；这段画面位于小队追查鬼市红茶的第5集。",
+      "kind": "still"
+    },
+    "s1-2": {
+      "file": "assets/cover-s1-2.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14",
+      "episode": 14,
+      "label": "重返甘棠驿",
+      "note": "苏无名与卢凌风换装回到驿馆，再查驿卒与闹鬼传闻。",
+      "kind": "still"
+    },
+    "s1-3": {
+      "file": "assets/cover-s1-3.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/3-12",
+      "episode": 12,
+      "label": "南州四子与画中旧事",
+      "note": "石桥图把南州名士的往事与眼前的命案联系起来。",
+      "kind": "still"
+    },
+    "s1-6": {
+      "file": "assets/cover-s1-6.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-26",
+      "episode": 26,
+      "label": "宁湖观神大典",
+      "note": "苏无名在大典上追问鼍神社的罪行，案中关键人物在此对峙。",
+      "kind": "still"
+    },
+    "s1-7": {
+      "file": "assets/cover-s1-7.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/9-30",
+      "episode": 30,
+      "label": "李约别院中的人面花案",
+      "note": "别院内藏有花树和解药所需之物，也是小队追查的关键地点。",
+      "kind": "still"
+    },
+    "s1-8": {
+      "file": "assets/cover-s1-8.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36",
+      "episode": 36,
+      "label": "参天楼幻术大会",
+      "note": "幻术大会进入最后阶段，卢苏二人也在此查验沙斯身份。",
+      "kind": "still"
+    },
+    "s2-1": {
+      "file": "assets/cover-s2-1.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/1-6",
+      "episode": 6,
+      "label": "壁画魔王背后的人",
+      "note": "小队从陌刀伤和药物追查，把魔王脱壁的传说拉回现实。",
+      "kind": "still"
+    },
+    "s2-3": {
+      "file": "assets/cover-s2-3.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13",
+      "episode": 13,
+      "label": "摩家店里的老板娘",
+      "note": "风雪把旅客聚在这家客店，随后发生的命案也绕不开店中人。",
+      "kind": "still"
+    },
+    "s2-4": {
+      "file": "assets/cover-s2-4.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-17",
+      "episode": 17,
+      "label": "千重渡船上的盘问",
+      "note": "渡船上的津令与旅人各有隐瞒，河上危险伴随调查展开。",
+      "kind": "still"
+    },
+    "s2-5": {
+      "file": "assets/cover-s2-5.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24",
+      "episode": 24,
+      "label": "寒州城中的宋阿糜",
+      "note": "宋阿糜的过去与通天犀相连，她的选择影响寒州安危。",
+      "kind": "still"
+    },
+    "s2-6": {
+      "file": "assets/cover-s2-6.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/9-30",
+      "episode": 30,
+      "label": "云鼎案中的吕仙客",
+      "note": "夜市名酒与人口失踪的线索最终汇向吕仙客。",
+      "kind": "still"
+    },
+    "s2-7": {
+      "file": "assets/cover-s2-7.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-34",
+      "episode": 34,
+      "label": "阴阿婆与楚宾的往事",
+      "note": "查案者追索多年前的遭遇，逐渐看清布店命案中的隐情。",
+      "kind": "still"
+    },
+    "s2-8": {
+      "file": "assets/cover-s2-8.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36",
+      "episode": 36,
+      "label": "在敦煌带路的多宝",
+      "note": "多宝最初为探案小队介绍敦煌，随后他的死把小队带入曹家疑案。",
+      "kind": "still"
+    },
+    "s3-1": {
+      "file": "assets/cover-s3-1.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-4",
+      "episode": 4,
+      "label": "终南山的巨禽线索",
+      "note": "鸟羽把小队引到终南山，人与乌焰鸟的关系成为调查重点。",
+      "kind": "still"
+    },
+    "s3-2": {
+      "file": "assets/cover-s3-2.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-11",
+      "episode": 11,
+      "label": "舞阳的去向",
+      "note": "舞阳失踪后，假认尸与换衣的线索令成佛寺案出现转机。",
+      "kind": "still"
+    },
+    "s3-3": {
+      "file": "assets/cover-s3-3.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/4-13",
+      "episode": 13,
+      "label": "入山寻找白泽",
+      "note": "引路人带队进入终南山，众人随后被困古庙。",
+      "kind": "still"
+    },
+    "s3-4": {
+      "file": "assets/cover-s3-4.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/6-21",
+      "episode": 21,
+      "label": "红药在公堂",
+      "note": "红药的陈述把命案与孟不疑、颜君羡等人的旧事相连。",
+      "kind": "still"
+    },
+    "s3-5": {
+      "file": "assets/cover-s3-5.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-24",
+      "episode": 24,
+      "label": "阮氏酒楼的宴席",
+      "note": "诗会聚起宾客与戏班，宴饮间却潜藏刺杀与劫掠。",
+      "kind": "still"
+    },
+    "s3-6": {
+      "file": "assets/cover-s3-6.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31",
+      "episode": 31,
+      "label": "韦杜两府的旧怨",
+      "note": "两位县尉的亲族往事，与失踪商人和连环命案逐渐交汇。",
+      "kind": "still"
+    },
+    "s3-7": {
+      "file": "assets/cover-s3-7.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35",
+      "episode": 35,
+      "label": "耿无伤身后的师门疑云",
+      "note": "小队重新检视仵作师徒之间的关系与留下的文字证据。",
+      "kind": "still"
+    },
+    "s3-8": {
+      "file": "assets/cover-s3-8.webp",
+      "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/13-40",
+      "episode": 40,
+      "label": "盛世马球的赛场",
+      "note": "最终的比赛也是小队揭破特制马球和细作阴谋的现场。",
+      "kind": "still"
+    },
+    "s4-1": {
+      "file": "assets/cover-s4-1.webp",
+      "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/4-14",
+      "episode": 14,
+      "label": "乔装进入解忧店",
+      "note": "卢凌风为保护天子，以替身身份进入解忧店。",
+      "kind": "still"
+    },
+    "s4-2": {
+      "file": "assets/cover-s4-2.webp",
+      "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/6-21",
+      "episode": 21,
+      "label": "旧东宫命案的证言",
+      "note": "魏焰与旧臣所述往事，将画中人物和连环命案联系起来。",
+      "kind": "still"
+    },
+    "s1-4": {
+      "file": "assets/s1-4.webp",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-15",
+      "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLB0tLDwqKB-3K78r.jpg",
+      "kind": "still",
+      "label": "文庙命案与独孤遐叔",
+      "note": "独孤遐叔所说的梦境和现实互相纠缠，裴喜君与费鸡师协助查明缘由。",
+      "episode": 15
+    },
+    "s1-5": {
+      "file": "assets/cover-s1-5.webp",
+      "kind": "still",
+      "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21",
+      "episode": 21,
+      "label": "众生堂阁楼里的旧案",
+      "note": "阁楼中出现的医家旧案，与眼前的药味和弃尸线索最终汇到一起。"
+    },
+    "s2-2": {
+      "file": "assets/s2-2.webp",
+      "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-9",
+      "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLB0nMTwqKB-3K78r.jpg",
+      "kind": "still",
+      "label": "独孤家命案的查访",
+      "note": "苏无名与卢凌风在拾阳县逐一核对独孤羊亲友的口供。",
+      "episode": 9
+    }
   }
 }

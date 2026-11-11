@@ -1,0 +1,14 @@
+{
+  "model": "anthropic/claude-opus-5.5",
+  "channel": "OpenCode / Modelink",
+  "notes": [
+    "人物卡改成竖版海报卡：海报在上，文字在下。图片 width:100%、height:auto、object-fit:contain，按海报原始比例完整显示，底部剧名也保留。图片框不再随旁边的长文拉高，上下大块黑边也就没了。旧的 .person-portrait 黑底和内边距都已去掉。",
+    "人物网格按宽度切换列数：桌面 4 列，1100px 以下 3 列（814px 截图宽度就是 3 列），760px 以下 2 列。只有不到 380px 的极窄屏才改回左图右文，并让图片顶端对齐，避免再出现黑边。",
+    "海报原始比例如果不一致，同一行的图片高度会略有差异。建议 Codex 给 <img> 加上真实的 width/height 属性，防止加载时布局跳动；另外最好统一用同一比例的官方海报。",
+    "案卷封面按真实剧照处理：16:9 裁切，object-position 设在 50% 35%，尽量保住人物面部。底部渐变加深，让图注压在画面上也能看清。悬停时轻微放大，开启减少动效时取消。这些规则依赖剧照所在 figure 带有 .still 类；老线稿 .illustration 的样式仍然保留作兜底。",
+    "单元人物索引：summary 改成‘展开 ＋ / 收起 −’，和来源页统一。.guest-controls 做成药丸形分段切换，aria-pressed='true' 为金底深字，按钮高 36px 以上，并有清晰的键盘焦点框，手机上两键平分整行。",
+    "按剧季和案件分组时，.guest-season 的 h3 做成金色标题加渐隐细线；.guest-case 是带朱砂左边线的小卡，案名链接后加 →，人物按钮 .chips button 沿用 .chip 的视觉。拼音视图保持原来的轻量分隔线列表，两种视图一眼能分开。",
+    "排版：正文行高提到 1.8，加入 text-wrap: pretty/balance，减少标点挤在行首行尾或标题孤字。说明文字用更亮的 #cdc1aa，提高对比度。卡片统一 6px 圆角、更柔和的描边和悬停阴影，墨绿加古金的基调不变。",
+    "不需要修改 HTML。只需确认几处结构：剧照 figure 带 .still 类；人物图放在 .person-portrait 里，或直接作为 .person-card 的子元素（两种写法都已兼容）；.guest-controls 放在 #guest-people 和 #guest-by-case 之前，同一时间只显示其中一个，未显示的那个设 hidden。"
+  ]
+}

@@ -49,10 +49,12 @@ for (const item of cases) {
   assert.equal(item.episodes.length, new Set(item.episodes).size);
   assert(item.episodes.every(ep => Number.isInteger(ep) && ep > 0 && ep <= seasons.find(s => s.id === item.season).episodes));
   assertLink(item.reference);
-  assert.equal(item.image.kind, "illustration");
+  assert.equal(item.image.kind, "still");
+  assertImage(item.image);
+  assert(item.episodes.includes(item.image.episode));
   assert(item.image.label && item.image.note);
   assertLink(item.image.source);
-  assert.match(fs.readFileSync(path.join(dist, item.image.file), "utf8"), /^<svg /);
+
   if (item.still) {
     assertImage(item.still);
     assert(item.episodes.includes(item.still.episode));
@@ -89,4 +91,4 @@ assert.equal(filterCases(cases, { season: "s4", query: "太子弘" }).length, 0)
 assert.equal(filterCases(cases, { season: "s4", query: "马球杖" })[0]?.title, "眚宫歌");
 assert.equal(filterCases(cases, { savedOnly: true, saved: ["s1-1"] })[0]?.title, "长安红茶");
 assert.equal(collectGuests(cases, people).filter(x => x.name === "苏无名").length, 0);
-console.log("26 named arcs, 137 episodes, 6 cast portraits, 26 clue plates, 5 verified stills, 3 spinoffs, ranks and search checks passed.");
+console.log("26 named arcs, 137 episodes, 6 cast portraits, 26 case-linked still covers, 5 verified stills, 3 spinoffs, ranks and search checks passed.");

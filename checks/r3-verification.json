@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-11",
+  "model": {
+    "name": "anthropic/claude-opus-5.5",
+    "channel": "OpenCode / Modelink",
+    "session": "ses_e37845509ffeFOIvG2kFAvYnc1",
+    "tokens": {
+      "input": 18658,
+      "output": 5331,
+      "reasoning": 5281,
+      "cache": 0
+    },
+    "reportedCost": 0,
+    "billingVerified": false
+  },
+  "checks": {
+    "contentAudit": "passed: 26 arcs, 137 episodes, 26 case-linked still covers",
+    "guestViews": "passed: alpha and cases, 26 groups",
+    "caseJump": "passed",
+    "guestSearch": "passed",
+    "posterGutters": "0px width, 0.8px height",
+    "mobileWidth": 390,
+    "mobileOverflow": false
+  },
+  "limitations": [
+    "Ego Lite Page.captureScreenshot timed out; screenshot-based visual review incomplete."
+  ]
+}

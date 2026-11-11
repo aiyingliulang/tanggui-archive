@@ -26,7 +26,7 @@ const people = [
   { id:"xue", name:"薛环", actor:"石悦安鑫", role:"探案小队 · 随行", bio:"原随侍裴喜君，后来拜卢凌风为师，随队查访、护卫，也逐渐能够独当一面。" }
 ];
 const assets = research("assets");
-const { spinoffs, guide, ranks, seasonSources, caseVisuals, portraits } = require("../content/revision.json");
+const { spinoffs, guide, ranks, seasonSources, caseVisuals, portraits, covers } = require("../content/revision.json");
 const careers = research("careers");
 for (const person of careers) {
   for (const entry of person.entries) entry.rank = ranks[entry.title];
@@ -44,13 +44,7 @@ for (const season of seasons) {
       people: record.people.map(name => ["公主","长公主"].includes(name) ? "太平公主" : name),
       episodes: [...Array.from({length:to-from+1}, (_,n) => from+n), ...extra],
       reference: episodes.find(ep => ep.n === from)?.url || season.reference,
-      image: {
-        kind: "illustration",
-        file: "assets/clue-" + id + ".svg",
-        label: caseVisuals[id].label,
-        note: caseVisuals[id].note,
-        source: episodes.find(ep => ep.n === from)?.url || season.reference
-      },
+      image: covers[id],
       still: caseVisuals[id].still
     });
   });

@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#161f1d">
   <title>唐诡宇宙 · 大唐诡案档案馆</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="opus-design.css">
   <script src="data.js" defer></script>
   <script src="archive-utils.js" defer></script>
   <script src="app.js" defer></script>
@@ -50,7 +51,10 @@
       <section id="people" class="archive-section" data-screen hidden aria-labelledby="people-title">
         <header class="section-heading"><div><p class="eyebrow">人物档案 · 关联案卷</p><h2 id="people-title">探案人物</h2></div><p>从常驻探案小队到单元关键人物，顺着人物找回关联的案件。</p></header>
         <div class="people-grid" id="people-grid"></div>
-        <details class="guest-index"><summary>查看单元人物索引 <span id="guest-count"></span></summary><div id="guest-people"></div></details>
+        <details class="guest-index"><summary>查看单元人物索引 <span id="guest-count"></span></summary><div class="guest-controls" role="group" aria-label="单元人物排列方式">
+          <button type="button" data-guest-view="alpha" aria-pressed="true">按拼音</button>
+          <button type="button" data-guest-view="cases" aria-pressed="false">按案卷</button>
+        </div><div id="guest-people"></div><div id="guest-by-case" hidden></div></details>
       </section>
 
       <section id="career" class="archive-section" data-screen hidden aria-labelledby="career-title">

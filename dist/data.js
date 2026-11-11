@@ -244,11 +244,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-1.svg",
-        "label": "鬼市红茶",
-        "note": "风靡长安的红茶把新娘失踪案牵到了鬼市。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode"
+        "file": "assets/cover-s1-1.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-5",
+        "episode": 5,
+        "label": "红茶案中的长安县令",
+        "note": "元来任长安县令；这段画面位于小队追查鬼市红茶的第5集。",
+        "kind": "still"
       }
     },
     {
@@ -284,11 +285,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-2.svg",
-        "label": "驿馆巨蟒",
-        "note": "驿馆中出现的巨蟒是甘棠驿怪谈的关键。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-7"
+        "file": "assets/cover-s1-2.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14",
+        "episode": 14,
+        "label": "重返甘棠驿",
+        "note": "苏无名与卢凌风换装回到驿馆，再查驿卒与闹鬼传闻。",
+        "kind": "still"
       }
     },
     {
@@ -326,11 +328,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-3.svg",
-        "label": "《石桥图》画卷",
-        "note": "画中的南州四子将接连发生的命案连到一起。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/2-9"
+        "file": "assets/cover-s1-3.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/3-12",
+        "episode": 12,
+        "label": "南州四子与画中旧事",
+        "note": "石桥图把南州名士的往事与眼前的命案联系起来。",
+        "kind": "still"
       }
     },
     {
@@ -365,11 +368,13 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-4.svg",
-        "label": "文庙投书",
-        "note": "从窗外扔入文庙的书，连接了目击与梦境。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14"
+        "file": "assets/s1-4.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-15",
+        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=kLB0tLDwqKB-3K78r.jpg",
+        "kind": "still",
+        "label": "文庙命案与独孤遐叔",
+        "note": "独孤遐叔所说的梦境和现实互相纠缠，裴喜君与费鸡师协助查明缘由。",
+        "episode": 15
       }
     },
     {
@@ -405,11 +410,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-5.svg",
-        "label": "包尸布上的药味",
-        "note": "药味把弃尸线索引向众生堂。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-18"
+        "file": "assets/cover-s1-5.webp",
+        "kind": "still",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21",
+        "episode": 21,
+        "label": "众生堂阁楼里的旧案",
+        "note": "阁楼中出现的医家旧案，与眼前的药味和弃尸线索最终汇到一起。"
       }
     },
     {
@@ -447,11 +453,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-6.svg",
-        "label": "宁湖巨鼍",
-        "note": "宁湖巨鼍与鼍神社的祭祀、威胁直接相关。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
+        "file": "assets/cover-s1-6.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-26",
+        "episode": 26,
+        "label": "宁湖观神大典",
+        "note": "苏无名在大典上追问鼍神社的罪行，案中关键人物在此对峙。",
+        "kind": "still"
       }
     },
     {
@@ -486,11 +493,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-7.svg",
-        "label": "人面花",
-        "note": "美容花料与洛阳女子的面部溃烂有关。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27"
+        "file": "assets/cover-s1-7.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/9-30",
+        "episode": 30,
+        "label": "李约别院中的人面花案",
+        "note": "别院内藏有花树和解药所需之物，也是小队追查的关键地点。",
+        "kind": "still"
       }
     },
     {
@@ -525,11 +533,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-32",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s1-8.svg",
-        "label": "参天楼与木鸟",
-        "note": "木鸟传书和楼中机关先后成为查案线索。",
-        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/10-32"
+        "file": "assets/cover-s1-8.webp",
+        "source": "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36",
+        "episode": 36,
+        "label": "参天楼幻术大会",
+        "note": "幻术大会进入最后阶段，卢苏二人也在此查验沙斯身份。",
+        "kind": "still"
       }
     },
     {
@@ -568,11 +577,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/I2BiY2lt/episode",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-1.svg",
-        "label": "成佛寺降魔壁画",
-        "note": "画中魔王与目击者描述的凶手相似。",
-        "source": "https://www.tvmao.com/kanju/I2BiY2lt/episode"
+        "file": "assets/cover-s2-1.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/1-6",
+        "episode": 6,
+        "label": "壁画魔王背后的人",
+        "note": "小队从陌刀伤和药物追查，把魔王脱壁的传说拉回现实。",
+        "kind": "still"
       }
     },
     {
@@ -613,11 +623,13 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-7",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-2.svg",
-        "label": "独孤信多面印",
-        "note": "多面印使几名当事人的动机浮出水面。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-7"
+        "file": "assets/s2-2.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/2-9",
+        "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=pLB0nMTwqKB-3K78r.jpg",
+        "kind": "still",
+        "label": "独孤家命案的查访",
+        "note": "苏无名与卢凌风在拾阳县逐一核对独孤羊亲友的口供。",
+        "episode": 9
       }
     },
     {
@@ -652,11 +664,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-3.svg",
-        "label": "风雪中的摩家店",
-        "note": "风雪让各路旅人同宿客店，命案在店中发生。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13"
+        "file": "assets/cover-s2-3.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/4-13",
+        "episode": 13,
+        "label": "摩家店里的老板娘",
+        "note": "风雪把旅客聚在这家客店，随后发生的命案也绕不开店中人。",
+        "kind": "still"
       },
       "still": {
         "file": "assets/scene-s2-3.webp",
@@ -697,11 +710,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-16",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-4.svg",
-        "label": "千重渡官船",
-        "note": "众人乘官船过河，途中遭遇漩涡和凶兽。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-16"
+        "file": "assets/cover-s2-4.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-17",
+        "episode": 17,
+        "label": "千重渡船上的盘问",
+        "note": "渡船上的津令与旅人各有隐瞒，河上危险伴随调查展开。",
+        "kind": "still"
       }
     },
     {
@@ -738,11 +752,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-18",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-5.svg",
-        "label": "通天犀",
-        "note": "寒州传说中的神犀与宋阿糜的过去有关。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/5-18"
+        "file": "assets/cover-s2-5.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24",
+        "episode": 24,
+        "label": "寒州城中的宋阿糜",
+        "note": "宋阿糜的过去与通天犀相连，她的选择影响寒州安危。",
+        "kind": "still"
       }
     },
     {
@@ -782,11 +797,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-6.svg",
-        "label": "云鼎长生醉",
-        "note": "夜市名酒与城里的人口失踪案相连。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/7-24"
+        "file": "assets/cover-s2-6.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/9-30",
+        "episode": 30,
+        "label": "云鼎案中的吕仙客",
+        "note": "夜市名酒与人口失踪的线索最终汇向吕仙客。",
+        "kind": "still"
       }
     },
     {
@@ -823,11 +839,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/10-31",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-7.svg",
-        "label": "上仙坊来信",
-        "note": "书信牵出李云生前的旧情和隐秘身份。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/10-31"
+        "file": "assets/cover-s2-7.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-34",
+        "episode": 34,
+        "label": "阴阿婆与楚宾的往事",
+        "note": "查案者追索多年前的遭遇，逐渐看清布店命案中的隐情。",
+        "kind": "still"
       }
     },
     {
@@ -865,11 +882,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s2-8.svg",
-        "label": "敦煌供养人壁画",
-        "note": "曹家的供养传统和莫高窟壁画贯穿多宝的故事。",
-        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36"
+        "file": "assets/cover-s2-8.webp",
+        "source": "https://www.tvmao.com/drama/I2BiY2lt/episode/11-36",
+        "episode": 36,
+        "label": "在敦煌带路的多宝",
+        "note": "多宝最初为探案小队介绍敦煌，随后他的死把小队带入曹家疑案。",
+        "kind": "still"
       },
       "still": {
         "file": "assets/scene-s2-8.webp",
@@ -913,11 +931,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-1.svg",
-        "label": "金桃中的舆图",
-        "note": "康国贡桃藏有牛皮舆图。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode"
+        "file": "assets/cover-s3-1.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-4",
+        "episode": 4,
+        "label": "终南山的巨禽线索",
+        "note": "鸟羽把小队引到终南山，人与乌焰鸟的关系成为调查重点。",
+        "kind": "still"
       }
     },
     {
@@ -957,11 +976,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-6",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-2.svg",
-        "label": "成佛寺夜哭",
-        "note": "佛殿夜间传出的哭声令寺中与坊间不安。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-6"
+        "file": "assets/cover-s3-2.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-11",
+        "episode": 11,
+        "label": "舞阳的去向",
+        "note": "舞阳失踪后，假认尸与换衣的线索令成佛寺案出现转机。",
+        "kind": "still"
       }
     },
     {
@@ -998,11 +1018,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-12",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-3.svg",
-        "label": "白泽石像",
-        "note": "古庙内的瑞兽石像呼应众人进山所寻的白泽。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/3-12"
+        "file": "assets/cover-s3-3.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/4-13",
+        "episode": 13,
+        "label": "入山寻找白泽",
+        "note": "引路人带队进入终南山，众人随后被困古庙。",
+        "kind": "still"
       }
     },
     {
@@ -1041,11 +1062,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-4.svg",
-        "label": "一品紫蛇",
-        "note": "紫蛇连起孟不疑、太医署药园和案中交易。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+        "file": "assets/cover-s3-4.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/6-21",
+        "episode": 21,
+        "label": "红药在公堂",
+        "note": "红药的陈述把命案与孟不疑、颜君羡等人的旧事相连。",
+        "kind": "still"
       },
       "still": {
         "file": "assets/scene-s3-4.webp",
@@ -1091,11 +1113,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-22",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-5.svg",
-        "label": "旗亭诗壁",
-        "note": "酒楼唱诗比试聚起宾客，刺杀也借宴席展开。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-22"
+        "file": "assets/cover-s3-5.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/7-24",
+        "episode": 24,
+        "label": "阮氏酒楼的宴席",
+        "note": "诗会聚起宾客与戏班，宴饮间却潜藏刺杀与劫掠。",
+        "kind": "still"
       },
       "still": {
         "file": "assets/scene-s3-5.webp",
@@ -1141,11 +1164,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-26",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-6.svg",
-        "label": "韦杜阀阅残石",
-        "note": "两家的残石帮助卢凌风追查旧怨。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-26"
+        "file": "assets/cover-s3-6.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31",
+        "episode": 31,
+        "label": "韦杜两府的旧怨",
+        "note": "两位县尉的亲族往事，与失踪商人和连环命案逐渐交汇。",
+        "kind": "still"
       }
     },
     {
@@ -1181,11 +1205,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-7.svg",
-        "label": "搐气袋与数字",
-        "note": "尸身旁的袋子和数字把多起命案连在一起。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31"
+        "file": "assets/cover-s3-7.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35",
+        "episode": 35,
+        "label": "耿无伤身后的师门疑云",
+        "note": "小队重新检视仵作师徒之间的关系与留下的文字证据。",
+        "kind": "still"
       }
     },
     {
@@ -1225,11 +1250,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s3-8.svg",
-        "label": "特制马球",
-        "note": "为比赛所制的新球与看台机关有关。",
-        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/11-35"
+        "file": "assets/cover-s3-8.webp",
+        "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/13-40",
+        "episode": 40,
+        "label": "盛世马球的赛场",
+        "note": "最终的比赛也是小队揭破特制马球和细作阴谋的现场。",
+        "kind": "still"
       },
       "still": {
         "file": "assets/scene-s3-8.webp",
@@ -1288,11 +1314,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/ailhZF9m/episode",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s4-1.svg",
-        "label": "红袍血书",
-        "note": "夹在旧红袍里的血字把小队引向解忧店。",
-        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode"
+        "file": "assets/cover-s4-1.webp",
+        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/4-14",
+        "episode": 14,
+        "label": "乔装进入解忧店",
+        "note": "卢凌风为保护天子，以替身身份进入解忧店。",
+        "kind": "still"
       }
     },
     {
@@ -1330,11 +1357,12 @@ window.TangArchive = {
       ],
       "reference": "https://www.tvmao.com/kanju/ailhZF9m/episode/5-16",
       "image": {
-        "kind": "illustration",
-        "file": "assets/clue-s4-2.svg",
-        "label": "《眚宫歌》与马球杖",
-        "note": "画卷与马球杖把命案连回旧东宫。",
-        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/5-16"
+        "file": "assets/cover-s4-2.webp",
+        "source": "https://www.tvmao.com/kanju/ailhZF9m/episode/6-21",
+        "episode": 21,
+        "label": "旧东宫命案的证言",
+        "note": "魏焰与旧臣所述往事，将画中人物和连环命案联系起来。",
+        "kind": "still"
       }
     }
   ],

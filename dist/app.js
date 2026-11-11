@@ -14,6 +14,7 @@ const search = $("#case-search");
 const state = { season: "all", query: "", savedOnly: false, saved: loadSaved() };
 let restoreFocus;
 let activeScreen;
+let guestView = "alpha";
 const screens = [...document.querySelectorAll("[data-screen]")];
 
 function loadSaved() {
@@ -26,7 +27,7 @@ function loadSaved() {
 }
 
 function imageTag(image, className, alt, loading = "lazy") {
-  return image ? `<img class="${className}" src="${escape(image.file)}" alt="${escape(alt)}" loading="${loading}" decoding="async">` : "";
+  return image ? `<img class="${className}" src="${escape(image.file)}" alt="${escape(alt)}" loading="${loading}" decoding="async"${className === "person-image" ? ' width="260" height="346"' : ""}>` : "";
 }
 
 function sourceLink([label, url]) {
@@ -97,6 +98,27 @@ function renderPeople() {
   $("#guest-people").innerHTML = guests.map(person => `<article><h3>${escape(person.name)}</h3><div class="chips">${caseLinks(person.caseIds)}</div></article>`).join("");
 }
 
+function renderGuestGroups() {
+  const mainNames = new Set(people.map(person => person.name));
+  $("#guest-by-case").innerHTML = seasons.map(season => {
+    const records = cases.filter(item => item.season === season.id);
+    return `<section class="guest-season"><h3>${escape(season.title)}</h3>${records.map(item => {
+      const names = [...new Set(item.people)].filter(name => !mainNames.has(name));
+      return `<article class="guest-case"><a class="guest-case-title" href="#case/${item.id}">${escape(item.title)}</a>
+        <div class="chips">${names.map(name => `<button class="chip" type="button" data-person="${escape(name)}">${escape(name)}</button>`).join("")}</div></article>`;
+    }).join("")}</section>`;
+  }).join("");
+}
+
+function setGuestView(view) {
+  guestView = view;
+  $("#guest-people").hidden = view !== "alpha";
+  $("#guest-by-case").hidden = view !== "cases";
+  for (const button of document.querySelectorAll("[data-guest-view]")) {
+    button.setAttribute("aria-pressed", button.dataset.guestView === view);
+  }
+}
+
 function renderCareers() {
   $("#career-grid").innerHTML = careers.map(person => `<article class="career-card">
     <h3>${escape(person.name)}</h3>
@@ -155,6 +177,7 @@ function renderCase(item) {
   const next = cases[cases.indexOf(item) + 1];
   $("#record-content").innerHTML = `
     ${visualTag(item, true)}
+    <div class="source-links cover-source">${sourceLink(["封面画面 · 第 " + item.image.episode + " 集", item.image.source])}</div>
     <div class="dialog-body"><div class="dialog-title">
       <div><p class="eyebrow">${escape(season.short)} · 第 ${item.order} 案 · ${formatEpisodes(item.episodes)}</p>
       <h2 id="record-title">${escape(item.title)}</h2></div>${bookmark(item)}
@@ -162,11 +185,11 @@ function renderCase(item) {
     <div class="case-place">${escape(item.place)}</div>
     <p class="case-intro">${escape(item.hook)}</p>
     <h3>案情梗概</h3><p>${escape(item.summary)}</p>
-    ${item.still ? `<aside class="case-still"><h3>案中画面 · 第 ${item.still.episode} 集</h3>${visualTag({image:item.still}, true)}<p>${sourceLink(["原剧画面出处", item.still.source])}</p></aside>` : ""}
+    ${item.still && item.still.source !== item.image.source ? `<aside class="case-still"><h3>案中画面 · 第 ${item.still.episode} 集</h3>${visualTag({image:item.still}, true)}<p>${sourceLink(["原剧画面出处", item.still.source])}</p></aside>` : ""}
     <h3>查案线索</h3><ul class="clues">${item.clues.map(clue => `<li>${escape(clue)}</li>`).join("")}</ul>
     <h3>案中人物</h3><div class="chips">${item.people.map(name => `<button type="button" data-person="${escape(name)}" class="chip">${escape(name)} ↗</button>`).join("")}</div>
     <details class="spoiler"><summary>展开案件真相 · 含剧透</summary><p>${escape(item.outcome)}</p></details>
-    <div class="source-links"><a href="${escape(item.reference || season.reference)}" target="_blank" rel="noreferrer">分集与插图依据 ↗</a>${sourceLink(season.extraSource)}<a href="${escape(season.official)}" target="_blank" rel="noreferrer">观看剧集 ↗</a></div>
+    <div class="source-links"><a href="${escape(item.reference || season.reference)}" target="_blank" rel="noreferrer">案情分集依据 ↗</a>${sourceLink(season.extraSource)}<a href="${escape(season.official)}" target="_blank" rel="noreferrer">观看剧集 ↗</a></div>
     <nav class="case-nav" aria-label="前后案卷">
       ${previous ? `<a href="#case/${previous.id}">← ${escape(previous.title)}</a>` : "<span></span>"}
       ${next ? `<a href="#case/${next.id}">${escape(next.title)} →</a>` : "<span></span>"}
@@ -249,6 +272,8 @@ $("#season-filters").innerHTML = [{ id: "all", short: "全部" }, ...seasons].ma
 renderHome();
 renderCases();
 renderPeople();
+renderGuestGroups();
+setGuestView(guestView);
 renderCareers();
 renderSpinoffs();
 renderSources();
@@ -278,7 +303,8 @@ window.addEventListener("hashchange", syncHash);
 document.addEventListener("click", event => {
   const button = event.target.closest("button");
   if (!button) return;
-  const { season, person, save, reset } = button.dataset;
+  const { season, person, save, reset, guestView: view } = button.dataset;
+  if (view) setGuestView(view);
   if (season) { state.season = season; renderCases(); }
   if (person) findPerson(person);
   if (save) toggleSave(button);

@@ -1,0 +1,588 @@
+/* Frontend design from Claude Opus 5.5, via OpenCode and Modelink. */
+:root {
+  --card:#1f2b27;
+  --card-raise:#24322d;
+  --line-soft:#2f3d37;
+  --gold-soft:#d6b97f;
+  --text-soft:#cdc1aa;
+  --radius-lg:6px;
+  --shadow-lg:0 22px 48px -30px rgba(0,0,0,.88)
+}
+
+body {
+  line-height:1.8;
+  letter-spacing:.015em;
+  background:radial-gradient(ellipse 120% 55% at 50% -12%,#1e2b27 0%,rgba(22,31,29,0) 62%),var(--ink)
+}
+
+p {
+  text-wrap:pretty
+}
+
+h1,h2,h3 {
+  text-wrap:balance
+}
+
+::selection {
+  background:rgba(190,158,101,.35);
+  color:#fff6e4
+}
+
+
+/* 导航 */
+.masthead {
+  border-bottom-color:var(--line-soft);
+  backdrop-filter:saturate(1.1) blur(6px)
+}
+
+.masthead nav a {
+  padding:.45rem .1rem;
+  letter-spacing:.12em
+}
+
+.masthead nav a[aria-current='page'],.masthead nav a[aria-current='true'] {
+  color:var(--gold-soft)
+}
+
+
+/* 栏目标题 */
+.section-heading {
+  align-items:flex-end;
+  margin-bottom:2rem;
+  padding-bottom:1.1rem;
+  border-bottom:1px solid transparent;
+  border-image:linear-gradient(90deg,var(--gold-dim),var(--line-soft) 55%,rgba(47,61,55,0)) 1
+}
+
+.section-heading h2 {
+  letter-spacing:.12em
+}
+
+.section-heading>p {
+  line-height:1.75;
+  color:var(--text-soft)
+}
+
+.route-note {
+  border-radius:0 2px 2px 0;
+  line-height:1.75
+}
+
+
+/* 首页导览 */
+.home-entries {
+  border-radius:var(--radius-lg);
+  overflow:hidden
+}
+
+.home-entry {
+  padding:1.5rem 1.4rem 2rem
+}
+
+.home-entry h3 {
+  letter-spacing:.1em
+}
+
+.home-entry:focus-visible {
+  outline-offset:-4px
+}
+
+
+/* 案卷卡片：真实剧照 */
+.case-grid {
+  gap:clamp(1rem,2vw,1.6rem)
+}
+
+.case-card {
+  border-radius:var(--radius-lg);
+  border-color:var(--line-soft);
+  background:linear-gradient(170deg,#22302b,#1b2623)
+}
+
+.case-card:hover,.case-card:focus-within {
+  border-color:rgba(190,158,101,.7);
+  box-shadow:var(--shadow-lg)
+}
+
+.case-cover {
+  aspect-ratio:16/9;
+  background:#111a17
+}
+
+.case-cover .still .case-image {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 35%;
+  filter:saturate(.92) contrast(1.04)
+}
+
+.case-card:hover .case-cover .still .case-image {
+  transform:scale(1.035)
+}
+
+.case-cover .still::after {
+  background:linear-gradient(0deg,rgba(15,21,19,.94) 0%,rgba(15,21,19,.45) 32%,rgba(15,21,19,0) 58%,rgba(15,21,19,.28) 100%)
+}
+
+.case-cover figcaption {
+  left:.85rem;
+  right:.85rem;
+  bottom:.72rem
+}
+
+.case-number {
+  border-radius:2px;
+  top:.75rem;
+  left:.75rem
+}
+
+.case-body {
+  gap:.55rem;
+  padding:1.15rem 1.3rem 1.3rem
+}
+
+.case-body h3 {
+  font-size:clamp(1.22rem,1.1rem + .4vw,1.4rem);
+  letter-spacing:.06em
+}
+
+.case-body p {
+  line-height:1.8;
+  color:var(--text-soft)
+}
+
+.case-foot {
+  border-top-color:var(--line-soft)
+}
+
+.case-dialog .case-visual.still .case-image {
+  object-position:50% 35%
+}
+
+.case-dialog {
+  border-radius:var(--radius-lg)
+}
+
+.case-dialog p {
+  line-height:1.85
+}
+
+
+/* 人物页：竖版海报卡，整图无留黑 */
+.people-grid {
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(.9rem,1.6vw,1.4rem);
+  align-items:stretch
+}
+
+.person-card {
+  display:flex;
+  flex-direction:column;
+  grid-template-columns:none;
+  padding:0;
+  overflow:hidden;
+  border-radius:var(--radius-lg);
+  border-color:var(--line-soft);
+  background:linear-gradient(180deg,#22302b,#1b2623);
+  transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)
+}
+
+.person-card:hover,.person-card:focus-within {
+  border-color:rgba(190,158,101,.7);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-lg)
+}
+
+.person-portrait {
+  display:block;
+  padding:0;
+  margin:0;
+  background:none;
+  line-height:0;
+  border-bottom:1px solid var(--line-soft)
+}
+
+.person-portrait .person-image,.person-card>.person-image {
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:50% 50%;
+  border:0
+}
+
+.person-content {
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  min-width:0;
+  padding:.95rem 1.05rem 1.15rem
+}
+
+.person-card .person-name {
+  font-size:1.25rem;
+  line-height:1.3;
+  letter-spacing:.08em
+}
+
+.person-card .person-role {
+  margin-top:.2rem;
+  font-size:.74rem;
+  letter-spacing:.12em;
+  line-height:1.5
+}
+
+.person-card p {
+  margin:.6rem 0 0;
+  font-size:.88rem;
+  line-height:1.78;
+  color:var(--text-soft)
+}
+
+.person-find {
+  align-self:flex-start;
+  margin-top:.95rem;
+  min-height:36px;
+  padding:.32rem .85rem;
+  border-radius:2px;
+  letter-spacing:.06em
+}
+
+.person-find:focus-visible {
+  outline-offset:2px
+}
+
+.portrait-credit {
+  font-size:.7rem;
+  color:#a39883
+}
+
+
+/* 单元人物索引 */
+.guest-index {
+  margin-top:2.25rem;
+  border-color:var(--line-soft);
+  border-radius:var(--radius-lg);
+  background:#1a2522
+}
+
+.guest-index>summary {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  list-style:none;
+  padding:1rem 1.2rem;
+  font-family:var(--serif);
+  font-size:1.08rem;
+  letter-spacing:.08em
+}
+
+.guest-index>summary::-webkit-details-marker {
+  display:none
+}
+
+.guest-index>summary::after {
+  content:'展开 ＋';
+  margin-left:auto;
+  color:var(--gold);
+  font:.78rem var(--sans);
+  letter-spacing:.1em;
+  white-space:nowrap
+}
+
+.guest-index[open]>summary::after {
+  content:'收起 −'
+}
+
+.guest-index[open]>summary {
+  border-bottom:1px solid var(--line-soft)
+}
+
+.guest-index>summary:hover {
+  color:var(--gold-soft)
+}
+
+.guest-index>summary:focus-visible {
+  outline-offset:-3px
+}
+
+.guest-controls {
+  display:inline-flex;
+  gap:2px;
+  margin:1rem 1.2rem .4rem;
+  padding:3px;
+  border:1px solid var(--frame);
+  border-radius:999px;
+  background:#111a17
+}
+
+.guest-controls button {
+  min-height:36px;
+  padding:.3rem 1.1rem;
+  border:0;
+  border-radius:999px;
+  background:transparent;
+  color:var(--parchment-dim);
+  font-size:.86rem;
+  letter-spacing:.08em;
+  transition:background .2s var(--ease),color .2s var(--ease)
+}
+
+.guest-controls button:hover {
+  color:var(--parchment)
+}
+
+.guest-controls button[aria-pressed='true'] {
+  background:var(--gold);
+  color:var(--ink)
+}
+
+.guest-controls button:focus-visible {
+  outline:2px solid var(--gold-soft);
+  outline-offset:2px
+}
+
+#guest-people {
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:0 1.5rem;
+  padding:.5rem 1.2rem 1.3rem
+}
+
+#guest-people article {
+  padding:.8rem 0;
+  border-top:1px solid var(--line-soft);
+  min-width:0
+}
+
+#guest-people h3 {
+  margin-bottom:.3rem;
+  font-size:1.02rem;
+  letter-spacing:.06em
+}
+
+#guest-people p {
+  margin:.2rem 0 .45rem;
+  font-size:.85rem;
+  line-height:1.7;
+  color:var(--text-soft)
+}
+
+#guest-by-case {
+  display:grid;
+  gap:1.8rem;
+  padding:.6rem 1.2rem 1.5rem
+}
+
+.guest-season {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:.8rem;
+  min-width:0
+}
+
+.guest-season>h3 {
+  grid-column:1/-1;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  margin:0 0 .1rem;
+  font-size:1.12rem;
+  letter-spacing:.12em;
+  color:var(--gold-soft)
+}
+
+.guest-season>h3::after {
+  content:'';
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,var(--gold-dim),rgba(143,118,72,0))
+}
+
+.guest-case {
+  min-width:0;
+  padding:.8rem .95rem .95rem;
+  background:var(--card);
+  border:1px solid var(--line-soft);
+  border-left:2px solid var(--cinnabar);
+  border-radius:2px
+}
+
+.guest-case-title {
+  display:inline-block;
+  margin-bottom:.55rem;
+  font-family:var(--serif);
+  font-size:1.02rem;
+  letter-spacing:.06em;
+  color:var(--paper);
+  text-decoration:none
+}
+
+.guest-case-title::after {
+  content:' →';
+  color:var(--gold);
+  font-size:.85em
+}
+
+.guest-case-title:hover {
+  color:var(--gold-soft);
+  text-decoration:underline
+}
+
+.chips button {
+  min-height:30px;
+  padding:.14rem .55rem;
+  background:#101b17;
+  border:1px solid var(--frame);
+  border-radius:2px;
+  color:#e1c48b;
+  font-size:.8rem;
+  line-height:1.5;
+  transition:border-color .2s var(--ease),color .2s var(--ease)
+}
+
+.chips button:hover {
+  border-color:var(--gold);
+  color:var(--paper)
+}
+
+.chips button:focus-visible {
+  outline-offset:2px
+}
+
+.chip {
+  border-radius:2px
+}
+
+
+/* 官职 / 外传 / 来源 */
+.career-card,.spinoff-card,.source-guide article,.source-card {
+  border-radius:var(--radius-lg)
+}
+
+.career-card {
+  border-color:var(--line-soft)
+}
+
+.career-card p,.spinoff-card p,.source-guide p {
+  line-height:1.78
+}
+
+.spinoff-card {
+  border-color:var(--line-soft)
+}
+
+
+/* 响应式 */
+@media (max-width:1100px) {
+  .people-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr))
+}
+
+}
+
+@media (max-width:760px) {
+  .people-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+}
+
+@media (max-width:640px) {
+.people-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.75rem
+}
+
+.person-content {
+  padding:.75rem .8rem .9rem
+}
+
+.person-card .person-name {
+  font-size:1.1rem
+}
+
+.person-card p {
+  font-size:.84rem;
+  line-height:1.72
+}
+
+.guest-controls {
+  display:flex;
+  margin:.9rem .9rem .3rem
+}
+
+.guest-controls button {
+  flex:1;
+  padding-inline:.6rem
+}
+
+#guest-people,#guest-by-case {
+  padding-inline:.9rem
+}
+
+.guest-season {
+  grid-template-columns:1fr
+}
+
+.guest-index>summary {
+  padding:.9rem
+}
+
+.case-body {
+  padding:1rem 1.05rem 1.1rem
+}
+
+
+}
+
+@media (max-width:380px) {
+.people-grid {
+  grid-template-columns:1fr
+}
+
+.person-card {
+  display:grid;
+  grid-template-columns:40% 1fr;
+  align-items:start
+}
+
+.person-portrait {
+  border-bottom:0;
+  border-right:1px solid var(--line-soft)
+}
+
+
+}
+
+
+/* 动效与高对比 */
+@media (prefers-reduced-motion:reduce) {
+.person-card:hover,.person-card:focus-within {
+  transform:none
+}
+
+.case-card:hover .case-cover .still .case-image {
+  transform:none
+}
+
+
+}
+
+@media (forced-colors:active) {
+.person-card,.guest-case,.guest-controls,.guest-index,.chips button {
+  border-color:CanvasText
+}
+
+.guest-controls button[aria-pressed='true'] {
+  forced-color-adjust:none;
+  background:Highlight;
+  color:HighlightText
+}
+
+
+}
+
