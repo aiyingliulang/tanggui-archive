@@ -48,7 +48,7 @@
 
 ## 自有域名与源码（2026-11-11）
 
-在线访问：https://aiyingliulang.qd.je/tanggui/
+在线访问：https://tanggui.aiyingliulang.qd.je/
 博客介绍：https://aiyingliulang.qd.je/projects/tanggui-archive
 GitHub 私有仓库：https://github.com/aiyingliulang/tanggui-archive
 
