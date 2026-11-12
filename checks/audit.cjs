@@ -3,13 +3,16 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 const assert = require("node:assert/strict");
+const { execFileSync } = require("node:child_process");
+
+execFileSync(process.execPath, [path.join(__dirname, "build-data.cjs"), "--check"], { stdio: "inherit" });
 
 const dist = path.resolve(__dirname, "..", "dist");
 const box = { window: {} };
 for (const file of ["data.js", "archive-utils.js"]) {
   vm.runInNewContext(fs.readFileSync(path.join(dist, file), "utf8"), box);
 }
-const { seasons, cases, people, careers, hero, spinoffs, guide } = box.window.TangArchive;
+const { seasons, cases, people, guests, careers, hero, spinoffs, guide } = box.window.TangArchive;
 const { groupEpisodes, filterCases, formatEpisodes, collectGuests } = box.window.ArchiveUtils;
 const ids = new Set(cases.map(item => item.id));
 const seasonIds = new Set(seasons.map(season => season.id));
@@ -74,6 +77,40 @@ for (const group of guide) for (const [, url] of group.links) assertLink(url);
 for (const item of people) {
   assertImage(item.image);
   assert(cases.some(record => record.people.includes(item.name)));
+  assert(item.bio.length >= 120, `${item.name}: missing expanded biography`);
+  assert(item.sources.length >= 2);
+  for (const [, url] of item.sources) assertLink(url);
+}
+const indexedGuests = collectGuests(cases, people);
+assert.equal(guests.length, indexedGuests.length);
+assert.equal(new Set(guests.map(person => person.name)).size, guests.length);
+for (const person of guests) {
+  assert(person.role && person.bio.length >= 45, `${person.name}: missing dossier`);
+  const indexed = indexedGuests.find(item => item.name === person.name);
+  assert(indexed, `${person.name}: no associated case`);
+  assert.deepEqual(Array.from(person.appearances, item => item.caseId).sort(), Array.from(indexed.caseIds).sort());
+  for (const entry of person.appearances) {
+    const record = cases.find(item => item.id === entry.caseId);
+    const season = seasons.find(item => item.id === record.season);
+    assert(entry.sources.length, `${person.name}/${entry.caseId}: no source`);
+    for (const [, url] of entry.sources) {
+      assertLink(url);
+      assert(record.episodes.some(n => season.episodeLinks[n - 1] === url));
+    }
+  }
+}
+assert.match(people.find(item => item.id === "chu").bio, /《鼍神》第 22 集相识/);
+assert(!people.find(item => item.id === "chu").bio.includes("众生堂"));
+assert(cases.find(item => item.id === "s1-4").people.includes("裴喜君"));
+assert(cases.find(item => item.id === "s1-2").people.includes("刘十九"));
+assert(cases.find(item => item.id === "s1-8").people.includes("冯寒"));
+assert.match(cases.find(item => item.id === "s3-4").outcome, /窒息/);
+// A named main character in an arc's text must be present in its character index.
+for (const record of cases) {
+  const text = [record.hook, record.summary, record.outcome, ...record.clues].join(" ");
+  for (const person of people) if (text.includes(person.name)) {
+    assert(record.people.includes(person.name), `${record.id}: missing ${person.name} association`);
+  }
 }
 for (const person of careers) {
   assert(people.some(item => item.name === person.name));
@@ -87,8 +124,8 @@ for (const person of careers) {
 assertImage(hero);
 assert.equal(formatEpisodes(cases[1].episodes), "第 7–9 集、第 13–14 集");
 assert.equal(filterCases(cases, { season: "s3", query: "紫蛇 孟不疑" })[0]?.title, "诺皋记");
-assert.equal(filterCases(cases, { season: "s4", query: "太子弘" }).length, 0);
+assert.equal(filterCases(cases, { season: "s4", query: "太子弘" })[0]?.title, "眚宫歌");
 assert.equal(filterCases(cases, { season: "s4", query: "马球杖" })[0]?.title, "眚宫歌");
 assert.equal(filterCases(cases, { savedOnly: true, saved: ["s1-1"] })[0]?.title, "长安红茶");
 assert.equal(collectGuests(cases, people).filter(x => x.name === "苏无名").length, 0);
-console.log("26 named arcs, 137 episodes, 6 cast portraits, 26 case-linked still covers, 5 verified stills, 3 spinoffs, ranks and search checks passed.");
+console.log(`26 named arcs, 137 episodes, 6 expanded biographies, ${guests.length} guest dossiers, 26 case-linked still covers, 5 verified stills, 3 spinoffs, ranks and search checks passed.`);

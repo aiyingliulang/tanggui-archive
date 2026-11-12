@@ -1,6 +1,6 @@
 "use strict";
 
-const { seasons, cases, people, careers, hero, spinoffs, guide } = window.TangArchive;
+const { seasons, cases, people, guests, careers, hero, spinoffs, guide } = window.TangArchive;
 const { filterCases, collectGuests, formatEpisodes, groupEpisodes } = window.ArchiveUtils;
 const $ = selector => document.querySelector(selector);
 const escape = value => String(value ?? "").replace(/[&<>"']/g, ch => ({
@@ -8,6 +8,7 @@ const escape = value => String(value ?? "").replace(/[&<>"']/g, ch => ({
 }[ch]));
 const seasonIndex = new Map(seasons.map(item => [item.id, item]));
 const caseIndex = new Map(cases.map(item => [item.id, item]));
+const guestIndex = new Map(guests.map(item => [item.name, item]));
 const storageKey = "tanggui-saved-v1";
 const dialog = $("#record-dialog");
 const search = $("#case-search");
@@ -89,13 +90,26 @@ function renderPeople() {
       <div class="person-portrait">${imageTag(person.image, "person-image", `${person.actor}饰${person.name}`)}</div>
       <div class="person-content"><span class="person-role">${escape(person.role)}</span>
       <h3 class="person-name">${escape(person.name)}</h3><small>${escape(person.actor)} 饰</small>
-      <p>${escape(person.bio)}</p><a class="portrait-credit" href="${escape(person.image.source)}" target="_blank" rel="noreferrer">角色图来源 ↗</a>
+      <p>${escape(person.bio)}</p>
+      <details class="person-sources"><summary>简介依据</summary>${person.sources.map(sourceLink).join(" · ")}</details>
+      <a class="portrait-credit" href="${escape(person.image.source)}" target="_blank" rel="noreferrer">角色图来源 ↗</a>
       <button class="person-find" data-person="${escape(person.name)}" type="button">查关联案卷 · ${ids.length} 案 <span aria-hidden="true">↗</span></button></div>
     </article>`;
   }).join("");
-  const guests = collectGuests(cases, people);
-  $("#guest-count").textContent = `${guests.length} 人`;
-  $("#guest-people").innerHTML = guests.map(person => `<article><h3>${escape(person.name)}</h3><div class="chips">${caseLinks(person.caseIds)}</div></article>`).join("");
+  const indexedGuests = collectGuests(cases, people);
+  $("#guest-count").textContent = `${indexedGuests.length} 个条目`;
+  $("#guest-people").innerHTML = indexedGuests.map(person => `<article><h3>${escape(person.name)}</h3><div class="chips">${caseLinks(person.caseIds)}</div>${guestProfile(person.name)}</article>`).join("");
+}
+
+function guestProfile(name, caseId) {
+  const person = guestIndex.get(name);
+  const appearances = person.appearances.filter(entry => !caseId || entry.caseId === caseId);
+  const sources = [...new Map(appearances.flatMap(entry => entry.sources).map(link => [link[1], link])).values()];
+  return `<details class="guest-profile"><summary>${escape(name)} · 人物档案（含剧情）</summary>
+    <p class="person-role">${escape(person.role)}</p><p>${escape(person.bio)}</p>
+    <div class="chips">${caseLinks(person.appearances.map(entry => entry.caseId))}</div>
+    <p class="profile-sources">档案依据：${sources.map(sourceLink).join(" · ")}</p>
+    <button class="chip" type="button" data-person="${escape(name)}">检索${escape(name)}的案卷 ↗</button></details>`;
 }
 
 function renderGuestGroups() {
@@ -105,7 +119,8 @@ function renderGuestGroups() {
     return `<section class="guest-season"><h3>${escape(season.title)}</h3>${records.map(item => {
       const names = [...new Set(item.people)].filter(name => !mainNames.has(name));
       return `<article class="guest-case"><a class="guest-case-title" href="#case/${item.id}">${escape(item.title)}</a>
-        <div class="chips">${names.map(name => `<button class="chip" type="button" data-person="${escape(name)}">${escape(name)}</button>`).join("")}</div></article>`;
+        <div class="chips">${names.map(name => `<button class="chip" type="button" data-person="${escape(name)}">${escape(name)}</button>`).join("")}</div>
+        ${names.map(name => guestProfile(name, item.id)).join("")}</article>`;
     }).join("")}</section>`;
   }).join("");
 }

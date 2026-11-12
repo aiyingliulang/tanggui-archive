@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "file": "assets/s3-6.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-27",
+    "url": "https://lbimg.tvmao.com/stillcut/MDwmKB=sL7CsMTwqKB-3K78r.jpg",
+    "label": "《唐朝诡事录之长安》剧照"
+  },
+  "lu": {
+    "file": "assets/lu.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr",
+    "url": "https://pix2.tvzhe.com/thumb/character/474/138/260x346.jpg"
+  },
+  "su": {
+    "file": "assets/su.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr",
+    "url": "https://pix2.tvzhe.com/thumb/character/474/139/260x346.jpg"
+  },
+  "pei": {
+    "file": "assets/pei.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr",
+    "url": "https://pix2.tvzhe.com/thumb/character/474/140/260x346.jpg"
+  },
+  "fei": {
+    "file": "assets/fei.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr",
+    "url": "https://pix2.tvzhe.com/thumb/character/474/141/260x346.jpg"
+  },
+  "chu": {
+    "file": "assets/chu.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr",
+    "url": "https://pix2.tvzhe.com/thumb/character/474/142/260x346.jpg"
+  },
+  "xue": {
+    "file": "assets/xue-changan.webp",
+    "source": "https://www.tvmao.com/kanju/JltpZ2hr/actors"
+  }
+}
