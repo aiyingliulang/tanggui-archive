@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-12",
+  "branch": "fix/tanggui-content-001",
+  "base": "b844bec",
+  "sourceInputs": {
+    "restored": 10,
+    "added": 2,
+    "originalUncommittedResearchRecovered": false,
+    "compiledBaselineRoundTrip": "identical before content edits"
+  },
+  "content": {
+    "mainBiographies": 6,
+    "guestEntries": 162,
+    "addedPeopleCaseAssociations": 103,
+    "changedCaseIndexes": 24
+  },
+  "checks": {
+    "build": "passed",
+    "audit": "passed",
+    "appSyntax": "passed",
+    "diffWhitespace": "passed",
+    "localHomepageHTTP": 200,
+    "browser": "Chromium headless",
+    "desktopViewport": [
+      1440,
+      1000
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "mainCards": 6,
+    "guestCards": 162,
+    "caseGroups": 26,
+    "dossierExpansion": "passed",
+    "dossierSources": "passed",
+    "peiSearchIncludesHuangmei": "passed",
+    "caseDialogIncludesPei": "passed",
+    "mobileHorizontalOverflow": false,
+    "runtimeErrors": 0,
+    "failedHTTPResources": 0
+  },
+  "screenshots": [
+    "checks/content-home.png",
+    "checks/content-mobile-profile.png"
+  ],
+  "deploymentPerformed": false
+}

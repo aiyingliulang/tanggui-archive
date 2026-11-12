@@ -273,6 +273,11 @@ button, summary { cursor: pointer; }
 #guest-people { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: .75rem; padding: 0 1rem 1rem; }
 #guest-people article, .episode-grid li { border-top: var(--rule); padding: .65rem 0; }
 #guest-people h3 { font-size: 1rem; }
+.guest-profile { margin-top: .75rem; border-top: var(--rule); padding-top: .6rem; }
+.guest-profile > summary, .person-sources > summary { cursor: pointer; color: var(--gold); }
+.guest-profile p { margin: .6rem 0; }
+.profile-sources, .person-sources { font-size: .8rem; overflow-wrap: anywhere; }
+.person-sources { margin-bottom: .75rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
 .chip { padding: .12rem .48rem; background: #101b17; border: 1px solid var(--frame); color: #e1c48b; font-size: .8rem; text-decoration: none; }
 .chip:hover { border-color: var(--gold); }

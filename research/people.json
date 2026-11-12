@@ -1,0 +1,144 @@
+[
+  {
+    "id": "lu",
+    "name": "卢凌风",
+    "actor": "杨旭文",
+    "role": "领衔 · 探案小队",
+    "bio": "出身范阳卢氏，初任金吾卫中郎将，在长安红茶案中与苏无名结识。离京后从州县刑案中体察民情，由锋芒毕露的武将成长为愿替百姓担责的查案者。初卷末由苏无名代狄仁杰收徒，与苏成为同门师兄弟；与裴喜君相互倾心。西行赴云鼎任县尉，后护送康国金桃回长安，复任雍州司法参军，在朝局与民间案情之间坚持查明真相。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 36 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36"
+      ],
+      [
+        "电视猫 · 初卷第 22 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
+      ],
+      [
+        "电视猫 · 长安第 5 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/1-5"
+      ]
+    ]
+  },
+  {
+    "id": "su",
+    "name": "苏无名",
+    "actor": "杨志刚",
+    "role": "领衔 · 探案小队",
+    "bio": "狄仁杰弟子，初任长安县尉，以验尸、勘察和比对证词见长。与卢凌风从争执到互相信任，破案时既追寻物证，也留意当事人的处境。先后在南州、宁湖等地办案，认裴喜君为义妹，在鼍神案中结识褚樱桃。曾任乾陵丞，西行时削职为民仍随队探案；返回长安后经历刑狱博士、暗探总监等身份变化，后来出任万年县尉。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 22 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
+      ],
+      [
+        "电视猫 · 初卷第 36 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/11-36"
+      ],
+      [
+        "电视猫 · 长安第 17 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+      ],
+      [
+        "电视猫 · 长安第 31 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/10-31"
+      ]
+    ]
+  },
+  {
+    "id": "pei",
+    "name": "裴喜君",
+    "actor": "郜思雯",
+    "role": "探案小队 · 画像",
+    "bio": "吏部侍郎裴坚之女，苏无名的义妹，与卢凌风相知相恋。擅画人像、辨识笔墨，能够将口述见闻转化为可供核查的图像。在石桥图案中参与辨画、补绘，黄梅杀第 17 集依独孤遐叔口述作画，协助分辨其梦境与记忆；众生堂案又从行医日志墨迹中发现篡改。返长安后筹办六合酥山店，并参与诺皋记、旗亭画壁等案，盛世马球中还为比赛设计新球。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 17 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-17"
+      ],
+      [
+        "电视猫 · 初卷第 21 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21"
+      ],
+      [
+        "电视猫 · 长安第 17 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+      ],
+      [
+        "电视猫 · 长安第 40 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/13-40"
+      ]
+    ]
+  },
+  {
+    "id": "fei",
+    "name": "费鸡师",
+    "actor": "陈创",
+    "role": "探案小队 · 医药",
+    "bio": "药王孙思邈弟子，嗜鸡喜酒，常以诙谐言行掩去医者本领。与孟东老有同门之谊，却不认同以害人为代价求医术。他为卢凌风疗伤，在黄梅杀中诊治独孤遐叔，在众生堂辨识药味并留下治疗头疾的方子；人面花案中配药救治受害者。西行时多次参与验药、解毒与营救，返回长安后又以六合酥山店店主身份融入坊市，仍守着行医救人的原则。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 21 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/6-21"
+      ],
+      [
+        "电视猫 · 西行第 30 集",
+        "https://www.tvmao.com/drama/I2BiY2lt/episode/9-30"
+      ],
+      [
+        "电视猫 · 长安第 17 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/5-17"
+      ]
+    ]
+  },
+  {
+    "id": "chu",
+    "name": "褚樱桃",
+    "actor": "孙雪宁",
+    "role": "探案小队 · 追踪",
+    "bio": "褚萧声之女，初以宁湖刺史李鹬之女的身份出现。她与苏无名在初卷《鼍神》第 22 集相识：苏无名一行避雨进入鼍神庙，藏身时遇到樱桃，并助她脱险。父亲的身份与鼍神社旧事揭开后，她随队前往洛阳，逐渐与苏无名相知。身手敏捷，擅跟踪、潜入与护卫；西行及重返长安后，既能独自深入险处，也与裴喜君协同查证，在云鼎和终南山等险局中参与救援。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 22 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/7-22"
+      ],
+      [
+        "电视猫 · 初卷第 25 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-25"
+      ],
+      [
+        "电视猫 · 初卷第 27 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/8-27"
+      ],
+      [
+        "电视猫 · 西行第 30 集",
+        "https://www.tvmao.com/drama/I2BiY2lt/episode/9-30"
+      ]
+    ]
+  },
+  {
+    "id": "xue",
+    "name": "薛环",
+    "actor": "石悦安鑫",
+    "role": "探案小队 · 随行",
+    "bio": "原为裴府少年家仆，随侍裴喜君，后来拜卢凌风为师，跟随他习武办案。年纪虽轻，却机警果敢：甘棠驿回查时追踪刘十八、协助擒拿涉案者；黄梅杀中与卢凌风、费鸡师合力捉住吉祥；众生堂案负责护卫并找到密道出口。随着历练增加，逐渐承担传信、查访和带人缉捕等任务，长安旗亭画壁案中率人将涉案者押解归案。",
+    "sources": [
+      [
+        "电视猫 · 初卷第 6 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/1-6"
+      ],
+      [
+        "电视猫 · 初卷第 14 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/4-14"
+      ],
+      [
+        "电视猫 · 初卷第 17 集",
+        "https://www.tvmao.com/drama/ZGpmYW8h/episode/5-17"
+      ],
+      [
+        "电视猫 · 长安第 25 集",
+        "https://www.tvmao.com/kanju/JltpZ2hr/episode/8-25"
+      ]
+    ]
+  }
+]
