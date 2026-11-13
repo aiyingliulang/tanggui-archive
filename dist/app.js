@@ -315,6 +315,9 @@ dialog.addEventListener("close", () => {
 });
 window.addEventListener("hashchange", syncHash);
 
+const sponsorDialog = $("#sponsor-dialog");
+$("#sponsor-button").addEventListener("click", () => sponsorDialog.showModal());
+
 document.addEventListener("click", event => {
   const button = event.target.closest("button");
   if (!button) return;
