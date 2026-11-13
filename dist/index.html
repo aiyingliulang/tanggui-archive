@@ -6,6 +6,7 @@
   <meta name="description" content="按播出顺序翻查《唐朝诡事录》系列的案件、人物与官职变迁。">
   <meta name="theme-color" content="#161f1d">
   <title>唐诡宇宙 · 大唐诡案档案馆</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="opus-design.css">
   <script src="data.js" defer></script>
@@ -79,7 +80,27 @@
     <div class="dialog-bar"><span class="eyebrow">大唐诡案档案馆</span><button type="button" class="close-dialog" aria-label="关闭案卷" autofocus>×</button></div>
     <div id="record-content"></div>
   </dialog>
-  <footer class="site-footer"><a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>非官方剧集资料站</small></span></a><a href="#top">返回卷首 ↑</a></footer>
+  <footer class="site-footer">
+    <a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>非官方剧集资料站</small></span></a>
+    <div class="footer-author">
+      <div class="footer-signature">
+        <span class="footer-seal" aria-hidden="true">艾</span>
+        <div><strong>艾影流浪</strong><small>唐诡宇宙整理与制作</small></div>
+      </div>
+      <button class="sponsor-button" id="sponsor-button" type="button" aria-haspopup="dialog" aria-controls="sponsor-dialog"><span aria-hidden="true">赏</span> 请作者喝杯茶</button>
+    </div>
+    <a href="#top">返回卷首 ↑</a>
+  </footer>
+  <dialog class="case-dialog sponsor-dialog" id="sponsor-dialog" aria-labelledby="sponsor-title">
+    <div class="dialog-body">
+      <form method="dialog"><button class="dialog-close" aria-label="关闭赞赏码" autofocus>×</button></form>
+      <p class="eyebrow">自愿赞赏</p>
+      <h2 id="sponsor-title">请艾影流浪喝杯茶</h2>
+      <p>微信扫码即可，量力而行，心意同样珍贵。</p>
+      <div class="sponsor-qr"><img src="assets/wechat-sponsor-qr.jpg" alt="艾影流浪的微信收款码" width="1280" height="1741" loading="lazy"></div>
+      <small>收款账号 · 艾影流浪</small>
+    </div>
+  </dialog>
   <noscript>打开 JavaScript 后可使用案件检索、案卷阅读和本机收藏。</noscript>
 </body>
 </html>

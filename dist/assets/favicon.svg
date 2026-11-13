@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>唐诡宇宙 · 灯照案卷</title>
+  <rect width="64" height="64" rx="12" fill="#161f1d"/>
+  <rect x="6" y="6" width="52" height="52" rx="6" fill="none" stroke="#be9e65" stroke-width="2"/>
+  <path d="M25 15h14M32 11v4M24 19h16l6 10-6 15H24l-6-15Z" fill="#923f32" stroke="#be9e65" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M18 29h28M28 20l-3 9 3 14M36 20l3 9-3 14M25 47h14M32 47v7" fill="none" stroke="#eee1c9" stroke-width="2" stroke-linecap="round"/>
+</svg>
