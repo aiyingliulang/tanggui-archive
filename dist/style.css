@@ -433,3 +433,5 @@ button, summary { cursor: pointer; }
   .career-timeline summary { grid-template-columns: 2.8rem 1fr auto; }
   .career-card { padding: 1rem; }
 }
+
+.site-footer .sister-sites{flex-basis:100%;margin:0;text-align:center;font-size:12px;line-height:1.8}.site-footer .sister-sites a{color:inherit;white-space:nowrap}
