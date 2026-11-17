@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="按播出顺序翻查《唐朝诡事录》系列的案件、人物与官职变迁。">
-  <meta name="theme-color" content="#161f1d">
+  <meta name="theme-color" content="#101816">
   <title>唐诡宇宙 · 大唐诡案档案馆</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
@@ -14,62 +14,191 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#cases">跳至案件目录</a>
+  <a class="skip-link" href="#archive-main">跳至正文内容</a>
   <header class="masthead">
-    <a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>大唐诡案档案馆</small></span></a>
-    <nav aria-label="主导航"><a href="#top" data-route="top">首页</a><a href="#cases" data-route="cases">案卷</a><a href="#people" data-route="people">人物</a><a href="#career" data-route="career">官职</a><a href="#spinoffs" data-route="spinoffs">外传</a><a href="#sources" data-route="sources">来源</a></nav>
-    <button class="search-toggle" type="button" aria-label="检索案卷"><span aria-hidden="true">⌕</span> <span class="search-label">检索</span></button>
+    <a class="brand" href="#top">
+      <span class="seal" aria-hidden="true">唐<br>诡</span>
+      <span class="brand-text">唐诡宇宙<small>大唐诡案档案馆</small></span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#top" data-route="top">首页</a>
+      <a href="#cases" data-route="cases">案卷</a>
+      <a href="#people" data-route="people">人物</a>
+      <a href="#career" data-route="career">官职</a>
+      <a href="#spinoffs" data-route="spinoffs">外传</a>
+      <a href="#sources" data-route="sources">来源</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="saved-shortcut" id="masthead-saved" type="button" aria-label="查看已收藏案卷">
+        <span aria-hidden="true">★</span>
+        <span class="saved-shortcut-label">藏卷</span>
+        <b id="masthead-saved-count">0</b>
+      </button>
+      <button class="search-toggle" type="button" aria-label="检索案卷（快捷键 /）">
+        <span aria-hidden="true">⌕</span>
+        <span class="search-label">检索</span>
+        <kbd aria-hidden="true">/</kbd>
+      </button>
+    </div>
   </header>
-  <main id="archive-main">
+
+  <main id="archive-main" tabindex="-1">
     <div id="top" data-screen>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <span class="eyebrow">大唐 · 诡案档案馆</span>
-        <h1 id="hero-title">唐诡<span>宇宙</span></h1>
-        <p>从长安红茶到西行迷案，从重返帝都到夜魅浮屠。沿着苏无名与卢凌风的足迹，翻开大唐案卷。</p>
-        <div class="hero-actions"><a class="primary" href="#cases">翻开案卷 <span aria-hidden="true">↘</span></a><a class="secondary" href="#people">查看人物</a></div>
-      </div>
-      <div class="hero-ledger" id="hero-ledger" aria-label="收录概览"></div>
-      <p class="hero-credit" id="hero-credit"></p>
-    </section>
-    <section class="shell home-index" aria-labelledby="home-index-title">
-      <header class="section-heading"><div><p class="eyebrow">卷首 · 选一处开始</p><h2 id="home-index-title">馆藏导览</h2></div></header>
-      <div class="home-entries" id="home-entries"></div>
-    </section>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy-frame">
+            <span class="eyebrow">大唐 · 诡案档案馆 · 四卷合编</span>
+            <h1 id="hero-title">唐诡<span>宇宙</span></h1>
+            <p class="hero-lead">从长安红茶到西行迷案，从重返帝都到夜魅浮屠。沿着苏无名与卢凌风的足迹，翻开二十六宗大唐诡案、百余位涉案人物与唐制仕途考据。</p>
+            <div class="hero-actions">
+              <a class="primary" href="#cases">翻开案卷 <span aria-hidden="true">↘</span></a>
+              <a class="secondary" href="#people">探案人物</a>
+              <button class="tertiary-btn" type="button" data-random-case>随机抽查一案 <span aria-hidden="true">✦</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom-bar">
+          <div class="hero-ledger" id="hero-ledger" aria-label="收录概览"></div>
+          <p class="hero-credit" id="hero-credit"></p>
+        </div>
+      </section>
+
+      <section class="shell home-volumes-section" aria-labelledby="home-volumes-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">编年总目 · 四卷二十六案</p>
+            <h2 id="home-volumes-title">按卷入局</h2>
+          </div>
+          <p>按作品首播次第编排，点击任一卷册即可直达对应单元案卷。</p>
+        </header>
+        <div class="home-volumes" id="home-volumes"></div>
+      </section>
+
+      <section class="shell home-index" aria-labelledby="home-index-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">卷首 · 选一处开始</p>
+            <h2 id="home-index-title">馆藏导览</h2>
+          </div>
+          <p>案卷、人物、仕途品阶与衍生短剧互为索引，随时交叉核查。</p>
+        </header>
+        <div class="home-entries" id="home-entries"></div>
+      </section>
+
+      <section class="shell home-team-section" aria-labelledby="home-team-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">常驻探案小队 · 六人同行</p>
+            <h2 id="home-team-title">长安与西行故人</h2>
+          </div>
+          <a class="section-more" href="#people">查阅完整人物档案与 162 份来客卷宗 →</a>
+        </header>
+        <div class="home-team" id="home-team"></div>
+      </section>
     </div>
 
     <div class="shell route-shell" id="route-shell" hidden>
       <section id="cases" class="archive-section" data-screen hidden aria-labelledby="cases-title">
-        <header class="section-heading"><div><p class="eyebrow">案卷库 · 按首播顺序</p><h2 id="cases-title">大唐案卷</h2></div><p>按剧集或案名检索。打开案卷可查看人物与分集线索，谜底默认折叠。</p></header>
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">案卷库 · 按首播顺序</p>
+            <h2 id="cases-title">大唐案卷</h2>
+          </div>
+          <p>按卷册筛选，或输入案名、地名、人物与物证线索。打开案卷可查阅原剧画面与分集依据，谜底默认封存。</p>
+        </header>
         <div class="toolbar">
-          <div class="filters" id="season-filters" aria-label="按剧集筛选"></div>
-          <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">检索案名、人物或线索</span><input type="search" id="case-search" placeholder="案名、人物或线索" autocomplete="off"></label>
+          <div class="filters" id="season-filters" role="group" aria-label="按剧集筛选"></div>
+          <div class="search-wrap">
+            <label class="search" for="case-search">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <span class="sr-only">检索案名、人物或线索</span>
+              <input type="search" id="case-search" placeholder="检索案名、人物、地名或物证…" autocomplete="off">
+            </label>
+            <button type="button" class="search-clear" id="case-search-clear" hidden aria-label="清空检索词">×</button>
+          </div>
         </div>
-        <div class="results-line"><p id="result-count" role="status"></p><button type="button" id="saved-toggle" aria-pressed="false">☆ 已收藏</button></div>
+        <div class="results-line">
+          <div class="results-meta">
+            <p id="result-count" role="status" aria-live="polite"></p>
+            <div id="active-filter-pills" class="active-pills"></div>
+          </div>
+          <div class="results-actions">
+            <button type="button" class="ghost-action" data-random-case>随机一案 ✦</button>
+            <button type="button" id="saved-toggle" aria-pressed="false">☆ 已收藏 0</button>
+          </div>
+        </div>
         <div class="case-grid" id="case-grid"></div>
       </section>
 
       <section id="people" class="archive-section" data-screen hidden aria-labelledby="people-title">
-        <header class="section-heading"><div><p class="eyebrow">人物档案 · 关联案卷</p><h2 id="people-title">探案人物</h2></div><p>从常驻探案小队到单元关键人物，顺着人物找回关联的案件。</p></header>
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">人物档案 · 关联案卷</p>
+            <h2 id="people-title">探案人物</h2>
+          </div>
+          <p>六位常驻主角附完整角色海报与履历；下方收录全部单元人物，身份与经历默认折叠以防剧透。</p>
+        </header>
         <div class="people-grid" id="people-grid"></div>
-        <details class="guest-index"><summary>查看单元人物索引 <span id="guest-count"></span></summary><div class="guest-controls" role="group" aria-label="单元人物排列方式">
-          <button type="button" data-guest-view="alpha" aria-pressed="true">按拼音</button>
-          <button type="button" data-guest-view="cases" aria-pressed="false">按案卷</button>
-        </div><div id="guest-people"></div><div id="guest-by-case" hidden></div></details>
+
+        <details class="guest-index" id="guest-index" open>
+          <summary>
+            <span class="guest-summary-title">单元人物索引</span>
+            <span id="guest-count" class="guest-badge"></span>
+          </summary>
+          <div class="guest-toolbar">
+            <div class="guest-controls" role="group" aria-label="单元人物排列方式">
+              <button type="button" data-guest-view="alpha" aria-pressed="true">按拼音</button>
+              <button type="button" data-guest-view="cases" aria-pressed="false">按案卷</button>
+            </div>
+            <div class="guest-search-wrap">
+              <label class="guest-search" for="guest-search">
+                <span aria-hidden="true">⌕</span>
+                <span class="sr-only">筛选单元人物</span>
+                <input type="search" id="guest-search" placeholder="筛选单元人物姓名或关联案名…" autocomplete="off">
+              </label>
+              <button type="button" class="search-clear" id="guest-search-clear" hidden aria-label="清空单元人物筛选">×</button>
+            </div>
+            <p class="guest-filter-status" id="guest-filter-status" role="status" aria-live="polite"></p>
+          </div>
+          <div id="guest-people"></div>
+          <div id="guest-by-case" hidden></div>
+        </details>
       </section>
 
       <section id="career" class="archive-section" data-screen hidden aria-labelledby="career-title">
-        <header class="section-heading"><div><p class="eyebrow">官职簿 · 随剧情推进</p><h2 id="career-title">两位主角的仕途</h2></div><p>对照剧中任命和唐制品级。展开条目，可查看任职集数、官品依据和关联案卷。</p></header>
-        <p class="route-note">唐制分正、从与上、下阶。州县官的品级还取决于辖地等级，品级不明的条目保留范围或注明依据。</p><div class="career-grid" id="career-grid"></div>
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">官职簿 · 随剧情推进</p>
+            <h2 id="career-title">两位主角的仕途</h2>
+          </div>
+          <div class="heading-side">
+            <p>对照剧中任命与《唐六典》官品。展开条目可查看任职集数、官品依据和关联案卷。</p>
+            <button type="button" class="ghost-action" id="career-expand-toggle" data-expanded="false">展开全部仕途</button>
+          </div>
+        </header>
+        <p class="route-note">唐制分正、从与上、下阶。州县官的品级还取决于辖地等级，品级不明的条目保留范围或注明依据；剧中虚衔与临时差遣亦单列说明。</p>
+        <div class="career-grid" id="career-grid"></div>
       </section>
 
       <section id="spinoffs" class="archive-section" data-screen hidden aria-labelledby="spinoffs-title">
-        <header class="section-heading"><div><p class="eyebrow">别卷 · 衍生短剧</p><h2 id="spinoffs-title">唐诡外传</h2></div><p>按首播顺序读衍生作品。每部单列主案、人物和出处。</p></header>
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">别卷 · 衍生短剧</p>
+            <h2 id="spinoffs-title">唐诡外传</h2>
+          </div>
+          <p>按首播顺序收录三部衍生短剧，单列主案、核心线索、演职员及与正传呼应的案卷。</p>
+        </header>
         <div id="spinoff-list" class="spinoff-list"></div>
       </section>
 
       <section id="sources" class="archive-section" data-screen hidden aria-labelledby="sources-title">
-        <header class="section-heading"><div><p class="eyebrow">收录说明 · 分集溯源</p><h2 id="sources-title">案卷校勘</h2></div><p>这里按用途列出处。分集承接两案时分别标记。</p></header>
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">收录说明 · 分集溯源</p>
+            <h2 id="sources-title">案卷校勘</h2>
+          </div>
+          <p>按片方资料、分集参考与唐代官制文献分类列明出处；跨案承接集数双向标记。</p>
+        </header>
         <div id="source-guide" class="source-guide"></div>
         <div id="source-list" class="source-list"></div>
       </section>
@@ -77,21 +206,36 @@
   </main>
 
   <dialog class="case-dialog" id="record-dialog" aria-labelledby="record-title">
-    <div class="dialog-bar"><span class="eyebrow">大唐诡案档案馆</span><button type="button" class="close-dialog" aria-label="关闭案卷" autofocus>×</button></div>
+    <div class="dialog-bar">
+      <span class="eyebrow" id="dialog-eyebrow">大唐诡案档案馆</span>
+      <div class="dialog-bar-actions">
+        <span class="dialog-kbd-hint" aria-hidden="true">← / → 翻阅相邻案卷</span>
+        <button type="button" class="close-dialog" aria-label="关闭案卷">×</button>
+      </div>
+    </div>
     <div id="record-content"></div>
   </dialog>
+
   <footer class="site-footer">
-    <a class="brand" href="#top"><span class="seal" aria-hidden="true">唐<br>诡</span><span>唐诡宇宙<small>非官方剧集资料站</small></span></a>
-    <div class="footer-author">
-      <div class="footer-signature">
-        <span class="footer-seal" aria-hidden="true">艾</span>
-        <div><strong>艾影流浪</strong><small>唐诡宇宙整理与制作</small></div>
+    <div class="footer-main">
+      <a class="brand" href="#top">
+        <span class="seal" aria-hidden="true">唐<br>诡</span>
+        <span class="brand-text">唐诡宇宙<small>非官方剧集资料站</small></span>
+      </a>
+      <div class="footer-author">
+        <div class="footer-signature">
+          <span class="footer-seal" aria-hidden="true">艾</span>
+          <div><strong>艾影流浪</strong><small>唐诡宇宙整理与制作</small></div>
+        </div>
+        <button class="sponsor-button" id="sponsor-button" type="button" aria-haspopup="dialog" aria-controls="sponsor-dialog">
+          <span aria-hidden="true">赏</span> 请作者喝杯茶
+        </button>
       </div>
-      <button class="sponsor-button" id="sponsor-button" type="button" aria-haspopup="dialog" aria-controls="sponsor-dialog"><span aria-hidden="true">赏</span> 请作者喝杯茶</button>
+      <a class="back-top" href="#top">返回卷首 ↑</a>
     </div>
-    <a href="#top">返回卷首 ↑</a>
     <p class="sister-sites">姊妹站：<a href="https://aiyingliulang.qd.je/">艾影流浪</a> · <a href="https://xunlongce.aiyingliulang.qd.je/">寻龙册</a> · <a href="https://jianghu.aiyingliulang.qd.je/">江湖志</a> · <a href="https://digong.aiyingliulang.qd.je/">狄公案牍</a> · <a href="https://yanshuangying.aiyingliulang.qd.je/">燕双鹰档案馆</a></p>
   </footer>
+
   <dialog class="case-dialog sponsor-dialog" id="sponsor-dialog" aria-labelledby="sponsor-title">
     <div class="dialog-body">
       <form method="dialog"><button class="dialog-close" aria-label="关闭赞赏码" autofocus>×</button></form>
